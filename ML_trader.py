@@ -198,7 +198,7 @@ def run_ML_trader(paths, N_tickers, conf_thresh, counter = 0, return_df = True):
         print('No stocks met criteria, expanding search and trying again...')
         run_ML_trader(paths, N_tickers * 3, conf_thresh, counter = 1)
     else:
-        print("No stocks had high enough confidence! \nRerun, lower the confidence or wait for \nanother time with better market conditions.")
+        print("No stocks had high enough confidence! \nRerun, lower the confidence, or wait for \nanother time with better market conditions.")
         if return_df == True:
             return out_df
     
