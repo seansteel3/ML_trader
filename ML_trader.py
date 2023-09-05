@@ -2,7 +2,7 @@
 """
 Created on Sun Sep  3 20:05:45 2023
 
-@author: q23853
+@author: Sean Steele
 """
 
 import requests
@@ -25,7 +25,7 @@ temp_dir = tempfile.mkdtemp() #make a temp directory to house the .h5 file
 os.chdir(temp_dir)
 
 #supress unecessary tensorflow warnings    
-logging.getLogger('tensorflow').setLevel(30)
+logging.getLogger('tensorflow').setLevel(50)
 
 #set the urls
 lrc_path = 'https://raw.githubusercontent.com/seansteel3/ML_trader/main/production_models/lrc.joblib'
@@ -37,6 +37,7 @@ dense_path = 'https://raw.githubusercontent.com/seansteel3/ML_trader/main/produc
 tickers_path = 'https://raw.githubusercontent.com/seansteel3/ML_trader/v0.0.1/valid_tickers.csv'
 
 paths = [lrc_path, rf_path, xgb_path, mars_path, scaler_path, dense_path, tickers_path]
+
 
 #load all models
 def get_models(lrc_path, rf_path, xgb_path, mars_path, scaler_path, dense_path, tickers_path):
@@ -141,11 +142,12 @@ def sample_tickers(N_tickers, today_date, valid_tickers, tab_scaler):
     colz_norm_name = ['bb_center21', 'bb_upp21', 'bb_low21', 'bb_center84', 'bb_upp84', 
                       'bb_low84', 'bb_center252',  'bb_upp252', 'bb_low252', 'atr_21',
                       'atr_84', 'atr_252'] 
-    colz_ml =  [ 'bb_center21', 'bb_upp21','bb_low21','bb_center84','bb_upp84',
+    colz_ml =  ['Volume', 'bb_center21', 'bb_upp21','bb_low21','bb_center84','bb_upp84',
                 'bb_low84','bb_center252','bb_upp252','bb_low252','minmax21',
                 'minmax84','minmax252','atr_21','atr_84','atr_252','rsi_21','rsi_84',
                  'rsi_252','vol_21','vol_84','vol_252']
     datas = pd.concat(datas)
+    datas.dropna(inplace = True) #why are any NA's getting through the constraints?
     #normalize to price
     for i in range(len(colz_norm_name)):
         col = colz_norm_name[i]
@@ -179,7 +181,7 @@ def predict_purchases(datas, saved_tickers, conf_thresh, models):
     out_df.reset_index(inplace = True, drop = True)
     return out_df 
 
-def run_ML_trader(paths, N_tickers, conf_thresh, counter = 0, return_df = True):
+def run_ML_trader(paths, N_tickers, conf_thresh, counter = 0):
     #unpack paths
     lrc_path, rf_path, xgb_path, mars_path, scaler_path, dense_path, tickers_path = paths
     #get models
@@ -191,18 +193,17 @@ def run_ML_trader(paths, N_tickers, conf_thresh, counter = 0, return_df = True):
     #make predictions
     out_df = predict_purchases(datas, saved_tickers, conf_thresh, models)
     if (out_df['Prediction'].sum() > 0):
-        print("Models predict: [" + str(out_df['Ticker'].iloc[0]) + "] is a buy with " + 
+        rec_df = out_df[out_df['Prediction'] == 1]
+        print("Models predict: [" + str(rec_df['Ticker'].iloc[0]) + "] is a buy with " + 
               str(np.round(out_df['Consensus'].iloc[0] * 100, 1)) + '% confidence!')
         return out_df
     elif  ((out_df['Prediction'].sum() == 0) & (counter == 0)):
         print('No stocks met criteria, expanding search and trying again...')
-        run_ML_trader(paths, N_tickers * 3, conf_thresh, counter = 1)
+        out_df = run_ML_trader(paths, N_tickers * 3, conf_thresh, counter = 1)
     else:
         print("No stocks had high enough confidence! \nRerun, lower the confidence, or wait for \nanother time with better market conditions.")
-        if return_df == True:
-            return out_df
+        return out_df
     
 
-out_df = run_ML_trader(paths = paths, N_tickers = 25, conf_thresh = 0.8, counter = 0)
-
+out_df = run_ML_trader(paths = paths, N_tickers = 50, conf_thresh = 0.75, counter = 0)
 
