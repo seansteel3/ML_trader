@@ -2,7 +2,7 @@
 An upgrade to the original random trader analysis, now including ML models.
 
 <!-- TABLE OF CONTENTS -->
-## Table of Contents
+## Table of Contents 
 
 * [Introduction](#introduction)
   * [Run With](#run-with)
