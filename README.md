@@ -22,7 +22,7 @@ An upgrade to the original random trader analysis, now including ML models.
 Python 3.9.17
 * Keras 1.13.1
 * Joblib 1.3.2
-* Numpy 1.23.9
+* Numpy 1.23.0
 * Pandas 2.1.0
 * Sklearn 1.3.0
 * Scipy 1.8.1
