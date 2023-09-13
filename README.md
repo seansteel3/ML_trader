@@ -19,6 +19,19 @@ An upgrade to the original random trader analysis, now including ML models.
 <!-- Run With -->
 ### Run With
 
+Python 3.9.17
+* Python 3.9.17
+* Keras 1.13.1
+* Joblib 1.3.2
+* Numpy 1.23.9
+* Pandas 2.1.0
+* Sklearn 1.3.0
+* Scipy 1.8.1
+* Tensorflow 2.13.0
+* Tqdm 4.66.1
+* Xgboost 1.7.6
+* Yfinace 0.2.28
+
 
 <!-- Methods-->
 ## Methods
