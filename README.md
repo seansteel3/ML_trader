@@ -7,6 +7,8 @@ An upgrade to the original random trader analysis, now including ML models.
 * [Introduction](#introduction)
   * [Run With](#run-with)
 * [Methods](#methods)
+  * [Data Preparation](#data-preparation)
+  * 
 * [Results](#results)
 * [References](#references)
 
