@@ -25,6 +25,7 @@ Python 3.9.17
 * Numpy 1.23.0
 * Pandas 2.1.0
 * Sklearn 1.3.0
+* Sklearn-contrib-py-earth 0.1.0 (requires numpy < 1.24.0)
 * Scipy 1.8.1
 * Tensorflow 2.13.0
 * Tqdm 4.66.1
