@@ -96,7 +96,7 @@ Backtests were conducted using only testing data with a purchase date between 1/
 
 Conditions:
 
-*VTI as a market proxy: Buy $10,000 on one day then sell it 126 trading days later for each starting day in the date range.
+* VTI as a market proxy: Buy $10,000 on one day then sell it 126 trading days later for each starting day in the date range.
 * Entirely Random Trader: Buy 15 securities entirely at random, then sell only after 126 consecutive trading days.
 * Baseline Random Trader: Buy 15 securities entirely at random, then sell and replace securities if they increase in value by 10% or after 126 consecutive trading days.
 * Model Average (Vote) at 50% threshold: Buy 15 random securities whose average logit prediction from the models is above 50%, then sell and replace securities if they increase in value by 10% or after 126 consecutive trading days.
