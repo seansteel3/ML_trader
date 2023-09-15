@@ -11,6 +11,9 @@ An upgrade to the original random trader analysis, now including ML models.
   * [Model Construction](#model-construction)
   * [Back Testing](#back-testing)
 * [Results](#results)
+  * [Individual Models](#individual-models)
+  * [Model Ensembles](#model-ensembles)
+  * [Back Testing](#back-testing)
 * [References](#references)
 
 
@@ -111,6 +114,9 @@ Conditions:
 <!-- Results-->
 ## Results
 
+<!-- Individual Models-->
+### Individual Models
+
 The five final individual models all preformed remarkably similar in terms of accuracy, precision, and ROC-AUC on the test data.
 * Random Forest 
   * Accuracy: 67.3%
@@ -140,6 +146,8 @@ Despite similar overall performance of each model, PCA projections make it clear
 
 ![Screenshot 2023-09-14 210301](https://github.com/seansteel3/ML_trader/assets/67161057/8ce81d61-2fa1-4e6f-a3be-99c5b08514f0)
 
+<!-- Model Ensembles-->
+### Model Ensembles
 
 The first ensemble strategy explored was model stacking with a logistic regression as the final classifier. The stacked model was quickly discarded as the stacked model accuracy dropped to just 61.1% and ROC-AUC score dropped to 0.58.
 
@@ -151,6 +159,9 @@ Raising the thresholds for both the mean voting and all model agreement ensemble
 
 ![Screenshot 2023-09-14 210446](https://github.com/seansteel3/ML_trader/assets/67161057/7fd9e941-25ef-4606-88cd-2fb8748c1ca8)
 
+
+<!-- Back Testing-->
+### Back Testing
 
 Back-tests during the testing date ranges were conducted to ascertain if both precision is in fact more important than accuracy, and if these models improve trading performance over the baseline random trader. Specifically, 7 back-tests were conducted each with 1,500 simulations. Four ensemble models, one on the baseline random trader from the previous analysis, one on a completely random trader (no sale and replacement when a security increases in value by 10%), and one apples-to-oranges comparison with VTI as a loose proxy for a market performance comparison.
 
