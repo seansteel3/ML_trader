@@ -163,7 +163,7 @@ Raising the thresholds for both the mean voting and all model agreement ensemble
 <!-- Back Testing-->
 ### Back Testing
 
-Back-tests during the testing date ranges were conducted to ascertain if both precision is in fact more important than accuracy, and if these models improve trading performance over the baseline random trader. Specifically, 7 back-tests were conducted each with 1,500 simulations. Four ensemble models, one on the baseline random trader from the previous analysis, one on a completely random trader (no sale and replacement when a security increases in value by 10%), and one apples-to-oranges comparison with VTI as a loose proxy for a market performance comparison.
+Back-tests during the testing date ranges were conducted to ascertain if precision is in fact more important than accuracy, and if these models improve trading performance over the baseline random trader. Specifically, 7 back-tests were conducted each with 1,500 simulations. Four ensemble models, one on the baseline random trader from the previous analysis, one on a completely random trader (no sale and replacement when a security increases in value by 10%), and one apples-to-oranges comparison with VTI as a loose proxy for a market performance comparison.
 
 Back-tests of VTI yielded mildly positive results with a mean return of 0.4% and a 45% negative return chance, while the entirely random trader had remarkably poor performance with an average of -7.8% returns and 74.5% chance of negative returns. The base random trader on the other hand had positive returns of 3.8% on average and only a 41.1% chance of losses. 
 
