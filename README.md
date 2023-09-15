@@ -110,7 +110,7 @@ Conditions:
 ## Results
 
 The five final individual models all preformed remarkably similar in terms of accuracy, precision, and ROC-AUC on the test data.
-*Random Forest 
+* Random Forest 
   * Accuracy: 67.3%
   * Precision: 62.4%
   * ROC-AUC: 0.719
@@ -130,11 +130,36 @@ The five final individual models all preformed remarkably similar in terms of ac
   * Accuracy: 66.9%
   * Precision: 62.4%
   * ROC-AUC: 0.721
+  
+![ind_mod_comparisions_roc](https://github.com/seansteel3/ML_trader/assets/67161057/ad996308-1dbc-4c9d-92b5-20bed746ae7c)
 
 Despite similar overall performance of each model, PCA projections make it clear the decision boundaries are not identical between models, potentially indicating value in model ensembling.
 
+![Screenshot 2023-09-14 210301](https://github.com/seansteel3/ML_trader/assets/67161057/8ce81d61-2fa1-4e6f-a3be-99c5b08514f0)
 
+The first ensemble strategy explored was model stacking with a logistic regression as the final classifier. The stacked model was quickly discarded as the stacked model accuracy dropped to just 61.1% and ROC-AUC score dropped to 0.58.
 
+The next ensemble strategy implemented was averaging of model logit predictions referred to as “average/mean voting” in the slide presentation. This strategy nominally yielded the highest accuracy of 67.3% and a comparable 62.8% precision. This ensembling method was similar to the final method of total agreement of models with an accuracy of 66.8% and overall highest precision of 64.6%. 
+
+Accuracy is not necessarily the overall most important factor when modeling investment strategies. False negative results certainly incur a cost, that cost is theoretical and only affects future potential earnings. Meanwhile false positive results can result in real losses to current values. Therefore, precision is likely more important than accuracy when assessing model performance.
+
+Raising the thresholds for both the mean voting and all model agreement ensembles from the standard 50% to 80% nearly trades percentage points of accuracy for precision evenly. The mean vote ensemble’s accuracy dropped 10.2 percentage points, but gained 9.3 percentage points in precision, and the all-model agreement ensemble’s accuracy dropped 13.2 percentage points but gained 10.9 percentage points in precision.
+
+![Screenshot 2023-09-14 210446](https://github.com/seansteel3/ML_trader/assets/67161057/7fd9e941-25ef-4606-88cd-2fb8748c1ca8)
+
+Back-tests during the testing date ranges were conducted to ascertain if both precision is in fact more important than accuracy, and if these models improve trading performance over the baseline random trader. Specifically, 7 back-tests were conducted each with 1,500 simulations. Four ensemble models, one on the baseline random trader from the previous analysis, one on a completely random trader (no sale and replacement when a security increases in value by 10%), and one apples-to-oranges comparison with VTI as a loose proxy for a market performance comparison.
+
+Back-tests of VTI yielded mildly positive results with a mean return of 0.4% and a 45% negative return chance, while the entirely random trader had remarkably poor performance with and average of -7.8% returns and 74.5% chance of negative returns. The base random trader on the other hand had positive returns of 3.8% on average and only a 41.1% chance of losses. 
+
+Back-tests across all the ensemble models shows a marked improvement over the truly random stock selection that at first glance seems to contradict the implications of the efficient market hypothesis. The vote and all-agreement ensembles at 50% threshold have mean returns of 6.2% and 7.7% respectively, and both under a 40% negative return chance. The 80% threshold vote and all-agreement returns have a massive improvement with mean returns of 19% and 24.2% respectively and right around 30% negative return chance. Additionally, comparison between the 50% and 80% thresholds solidly confirms precision and the tangible cost of false positives to be more important in an investing setting than accuracy and false negatives.
+
+![Screenshot 2023-09-14 210545](https://github.com/seansteel3/ML_trader/assets/67161057/de43e3d7-e8df-49c9-99b3-1d6b498d5018)
+
+Despite the glamorous performance of these models, returns overtime paint a similar overarching story, but with a few critical caveats. During steep market downturns all models and non-model back-tests preform nearly equivalent with expected returns of -12% to -18% approximately matching the market at the time. Where the models shine, especially the 80% threshold models, are during substantial market upswings, averaging as high as 60% returns during some months. 
+
+![image](https://github.com/seansteel3/ML_trader/assets/67161057/067941eb-23dc-46fa-a11e-c920ddd773d5)
+
+An additional point of caution the temporal breakout of returns makes clear is that average returns are highly dependent on overall market pressures. The adage that “past performance does not guarantee future success” absolutely holds true here, and deployment of these models into different timeframes will undoubtedly see entirely different return distributions. Further, in alignment of the efficient market hypothesis, it is unlikely that the performance of these models in a trading setting can be forecasted at all.
 
 <!-- References-->
 ## References
