@@ -109,6 +109,30 @@ Conditions:
 <!-- Results-->
 ## Results
 
+The five final individual models all preformed remarkably similar in terms of accuracy, precision, and ROC-AUC on the test data.
+1.	Random Forest 
+a.	Accuracy: 67.3%
+b.	Precision: 62.4%
+c.	ROC-AUC: 0.719
+2.	XGBoost
+a.	Accuracy: 66.8%
+b.	Precision: 61.9%
+c.	ROC-AUC: 0.718
+3.	MARS
+a.	Accuracy: 66.9%
+b.	Precision: 62.1%
+c.	ROC-AUC: 0.718
+4.	Logistic Regression
+a.	Accuracy: 66.7%
+b.	Precision: 64.3%
+c.	ROC-AUC: 0.712
+5.	FF-ANN
+a.	Accuracy: 66.9%
+b.	Precision: 62.4%
+c.	ROC-AUC: 0.721
+Despite similar overall performance of each model, PCA projections make it clear the decision boundaries are not identical between models, potentially indicating value in model ensembling.
+
+
 
 
 <!-- References-->
