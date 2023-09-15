@@ -182,7 +182,7 @@ An additional point of caution the temporal breakout of returns makes clear is t
 To further emphasize the efficient market hypothesis, the random forest classifier was reconfigured to predict if the overall value of the security would increase or decrease at the *end* of the next 127 trading days with respective accuracies of 51.4% and 53.1% on the test data. While the classifier was nominally able to do better than a random guess on test data, bootstrapping reveals this preformance to be due soley to random sampling of the test data. 
 
 * Average accuracy for predicting increase in value: 50.8% (+/- 2.5%)
-* Average accyracy for predicting decrease in value: 51.0% (+/- 3.3%)
+* Average accuracy for predicting decrease in value: 51.0% (+/- 3.3%)
 
 
 <!-- References-->
