@@ -131,7 +131,7 @@ The five final individual models all preformed remarkably similar in terms of ac
   * Precision: 62.4%
   * ROC-AUC: 0.721
   
-![ind_mod_comparisions_roc](https://github.com/seansteel3/ML_trader/assets/67161057/ad996308-1dbc-4c9d-92b5-20bed746ae7c)
+![image](https://github.com/seansteel3/ML_trader/assets/67161057/f37ec348-53c6-4602-930c-4b7ea2ed29e4)
 
 Despite similar overall performance of each model, PCA projections make it clear the decision boundaries are not identical between models, potentially indicating value in model ensembling.
 
