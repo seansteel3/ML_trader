@@ -46,10 +46,12 @@ All tickers for securities on the NYSE, AMEX, and NASDAQ were collected. All exi
 Technical Indicators:
 * RSI
 * MinMax Ratio
-* Moving Average
-* Bollinger Bands
-* Daily True Average Range
-* Volatility (as measured by historical standard deviation)
+* Moving Average (N)
+* Bollinger Bands (N)
+* Daily True Average Range (N)
+* Volatility (N) (as measured by historical standard deviation)
+
+Technical indicators with a (N) beside them were normalized by dividing by the closing price since they all are natively in the scale of the close price.
 
 All security’s dataframes were written to disk as csv files. All subsequent analysis was conducted using data from securities with a closing price less than $100 and greater than $2. These thresholds were chosen since trading stocks under $2 often have penny stock trading restrictions and stocks greater than $100 are harder to evenly allocate in a small-scale portfolio.
 
