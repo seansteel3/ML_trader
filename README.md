@@ -131,11 +131,13 @@ The five final individual models all preformed remarkably similar in terms of ac
   * Precision: 62.4%
   * ROC-AUC: 0.721
   
-![image](https://github.com/seansteel3/ML_trader/assets/67161057/f37ec348-53c6-4602-930c-4b7ea2ed29e4)
+![image](https://github.com/seansteel3/ML_trader/assets/67161057/ab0cce90-a4ab-4ed0-98b6-a7105d309197)
+
 
 Despite similar overall performance of each model, PCA projections make it clear the decision boundaries are not identical between models, potentially indicating value in model ensembling.
 
 ![Screenshot 2023-09-14 210301](https://github.com/seansteel3/ML_trader/assets/67161057/8ce81d61-2fa1-4e6f-a3be-99c5b08514f0)
+
 
 The first ensemble strategy explored was model stacking with a logistic regression as the final classifier. The stacked model was quickly discarded as the stacked model accuracy dropped to just 61.1% and ROC-AUC score dropped to 0.58.
 
@@ -147,6 +149,7 @@ Raising the thresholds for both the mean voting and all model agreement ensemble
 
 ![Screenshot 2023-09-14 210446](https://github.com/seansteel3/ML_trader/assets/67161057/7fd9e941-25ef-4606-88cd-2fb8748c1ca8)
 
+
 Back-tests during the testing date ranges were conducted to ascertain if both precision is in fact more important than accuracy, and if these models improve trading performance over the baseline random trader. Specifically, 7 back-tests were conducted each with 1,500 simulations. Four ensemble models, one on the baseline random trader from the previous analysis, one on a completely random trader (no sale and replacement when a security increases in value by 10%), and one apples-to-oranges comparison with VTI as a loose proxy for a market performance comparison.
 
 Back-tests of VTI yielded mildly positive results with a mean return of 0.4% and a 45% negative return chance, while the entirely random trader had remarkably poor performance with and average of -7.8% returns and 74.5% chance of negative returns. The base random trader on the other hand had positive returns of 3.8% on average and only a 41.1% chance of losses. 
@@ -155,9 +158,11 @@ Back-tests across all the ensemble models shows a marked improvement over the tr
 
 ![Screenshot 2023-09-14 210545](https://github.com/seansteel3/ML_trader/assets/67161057/de43e3d7-e8df-49c9-99b3-1d6b498d5018)
 
+
 Despite the glamorous performance of these models, returns overtime paint a similar overarching story, but with a few critical caveats. During steep market downturns all models and non-model back-tests preform nearly equivalent with expected returns of -12% to -18% approximately matching the market at the time. Where the models shine, especially the 80% threshold models, are during substantial market upswings, averaging as high as 60% returns during some months. 
 
 ![image](https://github.com/seansteel3/ML_trader/assets/67161057/067941eb-23dc-46fa-a11e-c920ddd773d5)
+
 
 An additional point of caution the temporal breakout of returns makes clear is that average returns are highly dependent on overall market pressures. The adage that “past performance does not guarantee future success” absolutely holds true here, and deployment of these models into different timeframes will undoubtedly see entirely different return distributions. Further, in alignment of the efficient market hypothesis, it is unlikely that the performance of these models in a trading setting can be forecasted at all.
 
