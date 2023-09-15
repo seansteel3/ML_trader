@@ -145,7 +145,7 @@ The first ensemble strategy explored was model stacking with a logistic regressi
 
 The next ensemble strategy implemented was averaging of model logit predictions referred to as “average/mean voting” in the slide presentation. This strategy nominally yielded the highest accuracy of 67.3% and a comparable 62.8% precision. This ensembling method was similar to the final method of total agreement of models with an accuracy of 66.8% and overall highest precision of 64.6%. 
 
-Accuracy is not necessarily the overall most important factor when modeling investment strategies. False negative results certainly incur a cost, that cost is theoretical and only affects future potential earnings. Meanwhile false positive results can result in real losses to current values. Therefore, precision is likely more important than accuracy when assessing model performance.
+Accuracy is not necessarily the overall most important factor when modeling investment strategies. False negative results certainly incur a cost, but that cost is theoretical and only affects future potential earnings. Meanwhile false positive results can result in real losses to current values. Therefore, precision is likely more important than accuracy when assessing model performance.
 
 Raising the thresholds for both the mean voting and all model agreement ensembles from the standard 50% to 80% nearly trades percentage points of accuracy for precision evenly. The mean vote ensemble’s accuracy dropped 10.2 percentage points, but gained 9.3 percentage points in precision, and the all-model agreement ensemble’s accuracy dropped 13.2 percentage points but gained 10.9 percentage points in precision.
 
