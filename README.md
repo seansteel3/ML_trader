@@ -81,7 +81,7 @@ Final model architectures:
 * XGBoost: 100 Trees, LR = 0.3
 * MARS: Default parameters
 * Logistic Regression: Default SKlearn parameters
-* FF-ANN: 3 hidden layers (14-7-5), Tanh Activation between hidden layers, 50% dropout before final layer with a sigmoid activation, trained for 9 epochs.
+* FF-ANN: 3 hidden layers (14-7-5), Tanh Activation between hidden layers, 50% dropout before final layer with a sigmoid activation, trained for 9 epochs with 0.001 starting learning rate using the Nadam optimizer and an expoential decay of 0.9 on the learning rate every 100,000 steps.
 
 Models were then ensembled in three ways:
 
