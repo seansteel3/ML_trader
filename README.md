@@ -66,7 +66,7 @@ This breakout was chosen since more recent data theoretically would be more impo
 
 Outliers in any of the technical indicators plus daily volume were then removed. Outliers were defined as instances where the data was greater than 4.5 standard deviations from the mean, and the threshold was chosen since it retained 95% of the data. This also clearly implies that the data does not follow a normal distribution. After removing outliers, the training dataset was rebalanced by random under sampling of the majority class leaving a final training dataset of 1.07 million data points. The data was finally rescaled to have mean of 0 and standard deviation of 1 using SKlearn’s StandardScaler.
 
-Final testing dataset was built by randomly sampling 100,000 data points between 1/1/2021 and 1/26/2023 then rebalancing and standardizing the data. 
+Final testing dataset was built by randomly sampling 100,000 data points between 1/1/2021 and 1/26/2023 then rebalancing and standardizing the data. Outliers were not removed from testing data.
 
 <!-- Model Construction-->
 ### Model Construction
