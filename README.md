@@ -16,7 +16,6 @@ An upgrade to the original random trader analysis, now including ML models.
   * [Back Testing](#back-testing)
   * [Shap Analysis](#shap-analysis)
 * [Conclusion](#conclusion)
-* [References](#references)
 
 
 <!-- Introduction -->
@@ -202,6 +201,3 @@ Instead, these models all appear to take advantage of volatility in the style of
 
 Future analysis will investigate different fund allocations and portfolio structures, time-series trend analysis in addition to volatility, and investigations into variations of the trading strategy.
 
-
-<!-- References-->
-## References
