@@ -197,7 +197,9 @@ Finally, shap beeswarm analysis of the random forest model gives some insight in
 ## Conclusion
 
 In the end, using an ensemble of machine learning models, analyzing a series of volatility based technical indicators, does appear to significantly increase performance over randomly picking securities to buy and sell after 6 months, or if the price of the security increase by 10% or more. While this machine learning security selection system does often pick securities who increase by 10% or more within six months, the system does not actually challenge the efficient market hypothesis. For instance, the models are no better than random guessing when configured to predict if a security will ultimately increase or decrease in value after a set amount of time.
+
 Instead, these models all appear to take advantage of volatility in the style of a regression-to-the-mean trading strategy. Specifically, the models do not pick “winners” or avoid “losers” but rather tend to avoid securities which have seen major recent upswings and pick securities which have had rapid downswings. Essentially, the models find their success by picking out securities that are well below their mean and have a low stability. This behavior is not unexpected given the fact the majority of the input data can be viewed as a measure of an element of volatility. 
+
 Future analysis will investigate different fund allocations and portfolio structures, time-series trend analysis in addition to volatility, and investigations into variations of the trading strategy.
 
 
