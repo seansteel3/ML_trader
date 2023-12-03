@@ -21,7 +21,7 @@ An upgrade to the original random trader analysis, now including ML models.
 <!-- Introduction -->
 ## Introduction
 
-This project aimed to be an extension of the original Random Trader analysis, specifically investigating if machine learning could improve upon the random trading strategy. The trading strategy that came out of the original analysis settled upon creating portfolios by choosing 15 securities entirely at random whose share value was between $2 and $75 dollars. These securities were then sold and replaced after six months, or if the security increased in value by 10% or more. The goal of this project was to replace the random selection process with machine learning models to pick securities that were statistically more likely to increase by 10% or more within 6 months.
+This project aimed to be an extension of the original Random Trader analysis, specifically investigating if machine learning could improve upon the random trading strategy. The trading strategy that came out of the original analysis settled upon creating portfolios by choosing 15 securities entirely at random whose share value was between $2 and $75. These securities were then sold and replaced after six months, or if the security increased in value by 10% or more. The goal of this project was to replace the random selection process with machine learning models to pick securities that were statistically more likely to increase by 10% or more within 6 months.
 
 <!-- Run With -->
 ### Run With
