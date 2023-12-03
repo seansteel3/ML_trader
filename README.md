@@ -14,6 +14,8 @@ An upgrade to the original random trader analysis, now including ML models.
   * [Individual Models](#individual-models)
   * [Model Ensembles](#model-ensembles)
   * [Back Testing](#back-testing)
+  * [Shap Analysis](#shap-analysis)
+* [Conclusion](#conclusion)
 * [References](#references)
 
 
@@ -183,6 +185,20 @@ To further emphasize the efficient market hypothesis, the random forest classifi
 
 * Average accuracy for predicting increase in value: 50.8% (+/- 2.5%)
 * Average accuracy for predicting decrease in value: 51.0% (+/- 3.3%)
+
+<!-- Shap Analysis -->
+### Shap Analysis
+
+Finally, shap beeswarm analysis of the random forest model gives some insight into how the models calculate if a security will increase by 10% in the next six months nor not. Securities with high yearly and monthly historical volatility, as well as 4 and 1-month average true range, but lower yearly average true range tend to be predicted as a buy. Additionally, 265 of 300 randomly chosen 80% threshold all model agreement ensemble predictions were below the security’s historical annual mean and all 300 were below 1 standard deviation above the security’s historical mean.  Taken together, these data imply the models likely work in a regression to the mean style strategy. Securities who are below their mean value, with high volatility, and therefore high chance for larger price swings, tend to be chosen by the models. 
+
+![shaps](https://github.com/seansteel3/ML_trader/assets/67161057/be12db3c-10b7-4cfd-bad2-f6c6d61a19e2)
+
+<!-- Conclusion-->
+## Conclusion
+
+In the end, using an ensemble of machine learning models, analyzing a series of volatility based technical indicators, does appear to significantly increase performance over randomly picking securities to buy and sell after 6 months, or if the price of the security increase by 10% or more. While this machine learning security selection system does often pick securities who increase by 10% or more within six months, the system does not actually challenge the efficient market hypothesis. For instance, the models are no better than random guessing when configured to predict if a security will ultimately increase or decrease in value after a set amount of time.
+Instead, these models all appear to take advantage of volatility in the style of a regression-to-the-mean trading strategy. Specifically, the models do not pick “winners” or avoid “losers” but rather tend to avoid securities which have seen major recent upswings and pick securities which have had rapid downswings. Essentially, the models find their success by picking out securities that are well below their mean and have a low stability. This behavior is not unexpected given the fact the majority of the input data can be viewed as a measure of an element of volatility. 
+Future analysis will investigate different fund allocations and portfolio structures, time-series trend analysis in addition to volatility, and investigations into variations of the trading strategy.
 
 
 <!-- References-->
