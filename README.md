@@ -45,7 +45,7 @@ Python 3.9.17
 
 <!-- Data Preparation-->
 ### Data Preparation 
-All tickers for securities on the NYSE, AMEX, and NASDAQ were collected. All existing security’s price information (open, high, low, close) were then downloaded through the YFinance API between 1/1/2013 and 8/1/2023. The following technical indicators were then calculated and added to each security’s price information dataframe for 21, 84, and 252 consecutive trading day windows as proxies for 1, 4, and 12 months of security activity. 
+All tickers for securities on the NYSE, AMEX, and NASDAQ were collected from the financialmodelingprep API. All existing security’s price information (open, high, low, close) were then downloaded through the YFinance API between 1/1/2013 and 8/1/2023. The following technical indicators were then calculated and added to each security’s price information dataframe for 21, 84, and 252 consecutive trading day windows as proxies for 1, 4, and 12 months of security activity. 
 
 Technical Indicators:
 * RSI
