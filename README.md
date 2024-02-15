@@ -59,7 +59,7 @@ Technical indicators with a (N) beside them were normalized by dividing by the c
 
 All security’s dataframes were written to disk as csv files. All subsequent analysis was conducted using data from securities with a closing price less than $100 and greater than $2. These thresholds were chosen since trading stocks under $2 often have penny stock trading restrictions and stocks greater than $100 are harder to evenly allocate in a small-scale portfolio.
 
-Final training data was sampled from 1/1/2013 – 12/31/2020 and testing data was sampled from 1/1/2021 – 8/1/2023. In preparation for model training, 1.5 million trading days were sampled at random with a bias towards more recent data as follows:
+Final training data was sampled from 1/1/2013 – 12/31/2020 and testing data was sampled from 1/1/2021 – 8/1/2023. In preparation for model training, 1.5 million trades were sampled at random with a bias towards more recent data as follows:
 
 * 20% between 1/1/2013 – 12/31/2014
 * 20% between 1/1/2015 – 12/31/2016
