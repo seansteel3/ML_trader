@@ -180,10 +180,10 @@ Despite the glamorous performance of these models, returns overtime paint a simi
 
 The temporal breakout of returns also makes it clear average returns are highly dependent on overall market pressures. The adage that “past performance does not guarantee future success” absolutely holds true here, and deployment of these models into different timeframes will undoubtedly see entirely different return distributions. Further, in alignment of the efficient market hypothesis, it is unlikely that the performance of these models in a trading setting can be forecasted at all. 
 
-To further emphasize the efficient market hypothesis, the random forest classifier was reconfigured to predict if the overall value of the security would increase at the *end* of the next 126 trading days with respective accuracies of 51.4% and 53.1% on the test data. While the classifier was nominally able to do better than a random guess on test data, bootstrapping reveals this preformance to likely be due to random sampling of the test data. 
+To further emphasize the efficient market hypothesis, the random forest classifier was reconfigured to predict if the overall value of the security would increase or decrease at the *end* of the next 126 trading days with respective accuracies of 51.4% and 53.1% on the test data. While the classifier was nominally able to do better than a random guess on test data, bootstrapping with a 95% confidence interval reveals this preformance to likely be due to random sampling of the test data. 
 
-* Average accuracy for predicting increase in value: 50.8% (+/- 2.5%)
-* Average accuracy for predicting decrease in value: 51.0% (+/- 3.3%)
+* Average accuracy for predicting increase in value: 51.4% (+/- 2.5%)
+* Average accuracy for predicting decrease in value: 53.1% (+/- 3.3%)
 
 <!-- Shap Analysis -->
 ### Shap Analysis
