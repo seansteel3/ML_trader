@@ -1,6 +1,28 @@
 # ML_trader
 An upgrade to the original random trader analysis, now including ML models.
 
+Available Traded: 7407 Tickers
+Unique Deslisted: 5711 Tickers
+
+
+Complete OLHCV and Quarterly Fundamental Data: 5433 Tickers with 10.1 Million observations
+7685 Tickers lacking OLHCV or Quarterly Fundamental Data
+
+Filter out NaN and values  W/o 6mo in the future labels 
+7.5 Million trainable observations
+prior to 1/1/2022 
+1/1/2022 onward
+Random Under Sampling: Neg30
+5.8 Million trainable observations
+1.6 Million testable observations
+Random Under Sampling: Gain10
+Random Under Sampling: Gain10
+Random Under Sampling: Neg30
+1.7 Million trainable Neg30 observations
+3.3 Million trainable Gain10 observations
+991K testable Gain10 observations
+864K testable Neg30 observations
+
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents 
 
