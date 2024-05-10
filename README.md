@@ -1,7 +1,7 @@
 # ML_trader
 An upgrade to the original random trader analysis, now including ML models.
 
-![image](https://github.com/seansteel3/ML_trader/assets/67161057/5c342a37-357c-41df-835d-1b65a6c19adf)
+![image](https://github.com/seansteel3/ML_trader/assets/67161057/ae8f5341-8b0e-43db-bedb-0d9dcd6be813)
 
 
 <!-- TABLE OF CONTENTS -->
