@@ -12,6 +12,7 @@ gain10 transformer scores
 ![image](https://github.com/seansteel3/ML_trader/assets/67161057/61fcdceb-474f-4a8e-b6cc-bc1438964342)
 
 neg30 transformer scores
+![image](https://github.com/seansteel3/ML_trader/assets/67161057/77b7e513-7161-4f46-95ac-d5bf13dff904)
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents 
