@@ -9,10 +9,17 @@ An upgrade to the original random trader analysis, now including ML models.
 ![image](https://github.com/seansteel3/ML_trader/assets/67161057/3bd8786a-8e45-40ce-a597-ca8be0a2b8cd)
 
 gain10 transformer scores
+
 ![image](https://github.com/seansteel3/ML_trader/assets/67161057/61fcdceb-474f-4a8e-b6cc-bc1438964342)
 
 neg30 transformer scores
+
 ![image](https://github.com/seansteel3/ML_trader/assets/67161057/77b7e513-7161-4f46-95ac-d5bf13dff904)
+
+optimization flow chart
+
+![image](https://github.com/seansteel3/ML_trader/assets/67161057/197c8f72-e7a4-4b74-bf75-e43fb77bc9de)
+
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents 
