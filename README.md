@@ -52,6 +52,25 @@ Gain10: Average Precision by Threshold Strat
 
 ![image](https://github.com/seansteel3/ML_trader/assets/67161057/ff390135-ddd3-4a75-8949-0ef1ed5c2063)
 
+Neg30 Heatmap w/balanced test set:
+
+![image](https://github.com/seansteel3/ML_trader/assets/67161057/7c842f91-134f-42fd-b397-aacf24c96ebb)
+
+Neg30 Heatmap w/ imbalanced test set (73.6% are class 1)
+
+![image](https://github.com/seansteel3/ML_trader/assets/67161057/2501ea82-1c6f-4acc-9281-3b548379aa80)
+
+Neg30 ROC-AUC
+
+![image](https://github.com/seansteel3/ML_trader/assets/67161057/ba5b08f4-afa8-4646-9542-09ef3437a864)
+
+
+
+
+
+
+
+
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents 
