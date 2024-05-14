@@ -56,19 +56,25 @@ Neg30 Heatmap w/balanced test set:
 
 ![image](https://github.com/seansteel3/ML_trader/assets/67161057/7c842f91-134f-42fd-b397-aacf24c96ebb)
 
-Neg30 Heatmap w/ imbalanced test set (73.6% are class 1)
+Neg30 Heatmap w/ imbalanced test set (73.6% are class 0)
 
 ![image](https://github.com/seansteel3/ML_trader/assets/67161057/2501ea82-1c6f-4acc-9281-3b548379aa80)
 
 Neg30 ROC-AUC
 
-![image](https://github.com/seansteel3/ML_trader/assets/67161057/ba5b08f4-afa8-4646-9542-09ef3437a864)
+![image](https://github.com/seansteel3/ML_trader/assets/67161057/cb797a72-e611-411c-bbac-bf6d4903f4c7)
 
+Gain10 Heatmap w/balanced test set:
 
+![image](https://github.com/seansteel3/ML_trader/assets/67161057/d4f63ecb-d244-439c-a130-a4d33e4c0f13)
 
+Gain10 Heatmap w/ imbalanced test set (69.7% are class 1)
 
+![image](https://github.com/seansteel3/ML_trader/assets/67161057/01fea353-7eaa-43ae-985e-cfd723628257)
 
+Gain10 ROC-AUC
 
+![image](https://github.com/seansteel3/ML_trader/assets/67161057/806532c8-329f-479e-8684-4b01bbeddd52)
 
 
 
