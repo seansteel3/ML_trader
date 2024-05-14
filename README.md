@@ -24,6 +24,10 @@ k-fold AUC resampling scores
 
 ![image](https://github.com/seansteel3/ML_trader/assets/67161057/2de3647d-8b9a-474d-b577-4b3808f91d59)
 
+k-fold AUC neg30 resampling scores
+
+![image](https://github.com/seansteel3/ML_trader/assets/67161057/66fa5f70-b4da-49b8-b5e6-a0c4da70cc16)
+
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents 
