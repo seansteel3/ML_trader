@@ -28,6 +28,14 @@ k-fold AUC neg30 resampling scores
 
 ![image](https://github.com/seansteel3/ML_trader/assets/67161057/654990df-7c9b-4dad-b5d5-c93ac1afaf29)
 
+Neg30: ROC/Mean thresholds for class 1
+
+![image](https://github.com/seansteel3/ML_trader/assets/67161057/11e59225-a0f2-404c-8590-96304e27aea6)
+
+Gain10: ROC/Mean thresholds for class 1
+
+![image](https://github.com/seansteel3/ML_trader/assets/67161057/6779018a-15dc-4727-b761-b5ceed832b8b)
+
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents 
