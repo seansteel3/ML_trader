@@ -110,9 +110,8 @@ Both Zoomed Historgram
 
 6 month porfolio returns
 
-  <img src="![image](https://github.com/seansteel3/ML_trader/assets/67161057/9303d700-ba1e-4505-af05-31a84c5909bf)" width="100" />
-  <img src="![image](https://github.com/seansteel3/ML_trader/assets/67161057/2323f68a-9ad0-4a0a-b611-2d48b73b3447)" width="100" /> 
-  <img src="![image](https://github.com/seansteel3/ML_trader/assets/67161057/9a4030ee-a9e7-4a72-a385-fddea03c9fe1)" width="100" />
+![image](https://github.com/seansteel3/ML_trader/assets/67161057/d5bd46e6-308e-4162-9eb9-1f13819a898d) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/1b08363e-052a-40ca-8495-8d26baad9ae4) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/206cc657-6399-4777-b9f9-b431116babb3)
+
 
 
 
