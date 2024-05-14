@@ -101,6 +101,7 @@ Neg30 only zoomed histogram
 ![image](https://github.com/seansteel3/ML_trader/assets/67161057/0c0cd0c6-7048-4204-aa91-72db82c7c2d3)
 
 Both histogram
+
 ![image](https://github.com/seansteel3/ML_trader/assets/67161057/63abdccb-792f-423c-9922-56e9db14272d)
 
 Both Zoomed Historgram
