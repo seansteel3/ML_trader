@@ -72,10 +72,40 @@ Gain10 Heatmap w/ imbalanced test set (69.7% are class 1)
 
 ![image](https://github.com/seansteel3/ML_trader/assets/67161057/052334df-a29d-47ec-9371-b7951c2dddf7)
 
-
 Gain10 ROC-AUC
 
 ![image](https://github.com/seansteel3/ML_trader/assets/67161057/806532c8-329f-479e-8684-4b01bbeddd52)
+
+Random Returns histogram
+
+![image](https://github.com/seansteel3/ML_trader/assets/67161057/b1b22dc1-ffc6-448a-a6f7-f416c4ca99ac)
+
+Random returns zoomed histogram
+
+![image](https://github.com/seansteel3/ML_trader/assets/67161057/c7a3cd12-1fa4-4891-92a9-da6caa2a0543)
+
+Gain only returns histogram
+
+![image](https://github.com/seansteel3/ML_trader/assets/67161057/e2132824-88c3-410c-8e33-5bb7f4e903f1)
+
+Gain only zoomed histogram
+
+![image](https://github.com/seansteel3/ML_trader/assets/67161057/ed97e2fc-5250-42e3-ad43-9d9657540bc6)
+
+Neg30 only histogram
+
+![image](https://github.com/seansteel3/ML_trader/assets/67161057/4b7636b3-1522-4c23-9c03-ef53b837fa13)
+
+Neg30 only zoomed histogram
+
+![image](https://github.com/seansteel3/ML_trader/assets/67161057/0c0cd0c6-7048-4204-aa91-72db82c7c2d3)
+
+Both histogram
+![image](https://github.com/seansteel3/ML_trader/assets/67161057/63abdccb-792f-423c-9922-56e9db14272d)
+
+Both Zoomed Historgram
+
+![image](https://github.com/seansteel3/ML_trader/assets/67161057/391247a2-e9b2-4794-b745-702e896909be)
 
 
 
