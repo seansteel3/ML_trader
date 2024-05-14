@@ -30,12 +30,11 @@ k-fold AUC neg30 resampling scores
 
 Neg30: ROC/Mean thresholds for class 1
 
-![image](https://github.com/seansteel3/ML_trader/assets/67161057/11e59225-a0f2-404c-8590-96304e27aea6)
+![image](https://github.com/seansteel3/ML_trader/assets/67161057/ccd86737-d823-4b9d-b349-a459a3bffa5b)
 
 Neg30: Average Accuracy by Threshold Strat
 
 ![image](https://github.com/seansteel3/ML_trader/assets/67161057/61a1265e-3c0a-4852-a4ff-d3e3146ce274)
-
 
 Neg30: Average Negative Precision by Threshold Strat
 
@@ -43,7 +42,7 @@ Neg30: Average Negative Precision by Threshold Strat
 
 Gain10: ROC/Mean thresholds for class 1
 
-![image](https://github.com/seansteel3/ML_trader/assets/67161057/6779018a-15dc-4727-b761-b5ceed832b8b)
+![image](https://github.com/seansteel3/ML_trader/assets/67161057/c62cc6a6-5b62-4d8b-87a6-d392b1c4d429)
 
 Gain10: Average Accuracy by Threshold Strat
 
