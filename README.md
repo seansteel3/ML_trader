@@ -20,6 +20,10 @@ optimization flow chart
 
 ![image](https://github.com/seansteel3/ML_trader/assets/67161057/197c8f72-e7a4-4b74-bf75-e43fb77bc9de)
 
+k-fold AUC resampling scores
+
+![image](https://github.com/seansteel3/ML_trader/assets/67161057/2de3647d-8b9a-474d-b577-4b3808f91d59)
+
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents 
