@@ -58,7 +58,7 @@ Neg30 Heatmap w/balanced test set:
 
 Neg30 Heatmap w/ imbalanced test set (73.6% are class 0)
 
-![image](https://github.com/seansteel3/ML_trader/assets/67161057/2501ea82-1c6f-4acc-9281-3b548379aa80)
+![image](https://github.com/seansteel3/ML_trader/assets/67161057/1bbf571b-efd6-456b-a015-f22a11b9dc87)
 
 Neg30 ROC-AUC
 
@@ -70,7 +70,8 @@ Gain10 Heatmap w/balanced test set:
 
 Gain10 Heatmap w/ imbalanced test set (69.7% are class 1)
 
-![image](https://github.com/seansteel3/ML_trader/assets/67161057/01fea353-7eaa-43ae-985e-cfd723628257)
+![image](https://github.com/seansteel3/ML_trader/assets/67161057/052334df-a29d-47ec-9371-b7951c2dddf7)
+
 
 Gain10 ROC-AUC
 
