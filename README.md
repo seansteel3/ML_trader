@@ -32,9 +32,26 @@ Neg30: ROC/Mean thresholds for class 1
 
 ![image](https://github.com/seansteel3/ML_trader/assets/67161057/11e59225-a0f2-404c-8590-96304e27aea6)
 
+Neg30: Average Accuracy by Threshold Strat
+
+![image](https://github.com/seansteel3/ML_trader/assets/67161057/61a1265e-3c0a-4852-a4ff-d3e3146ce274)
+
+
+Neg30: Average Negative Precision by Threshold Strat
+
+![image](https://github.com/seansteel3/ML_trader/assets/67161057/eae7f2fa-acfe-4ca6-b8d2-cb2c93652d6a)
+
 Gain10: ROC/Mean thresholds for class 1
 
 ![image](https://github.com/seansteel3/ML_trader/assets/67161057/6779018a-15dc-4727-b761-b5ceed832b8b)
+
+Gain10: Average Accuracy by Threshold Strat
+
+![image](https://github.com/seansteel3/ML_trader/assets/67161057/bb8ce620-3b89-488e-9709-730ba43b15ba)
+
+Gain10: Average Precision by Threshold Strat
+
+![image](https://github.com/seansteel3/ML_trader/assets/67161057/ff390135-ddd3-4a75-8949-0ef1ed5c2063)
 
 
 <!-- TABLE OF CONTENTS -->
