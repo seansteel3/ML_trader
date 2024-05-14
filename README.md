@@ -8,7 +8,7 @@ An upgrade to the original random trader analysis, now including ML models.
 
 ![image](https://github.com/seansteel3/ML_trader/assets/67161057/3bd8786a-8e45-40ce-a597-ca8be0a2b8cd)
 
-gain10 transformer scores
+gain10 transformer scores 
 
 ![image](https://github.com/seansteel3/ML_trader/assets/67161057/61fcdceb-474f-4a8e-b6cc-bc1438964342)
 
