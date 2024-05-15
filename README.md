@@ -81,30 +81,22 @@ Random Returns histogram
 ![image](https://github.com/seansteel3/ML_trader/assets/67161057/ed1446dc-0b85-47e2-b96e-49ca61a726a1) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/23751d75-bdb2-4e8b-854d-f9442423ff17)
 
 
-
 Gain only returns histogram
 
-![image](https://github.com/seansteel3/ML_trader/assets/67161057/e2132824-88c3-410c-8e33-5bb7f4e903f1)
+![image](https://github.com/seansteel3/ML_trader/assets/67161057/e2ebc15a-3383-409c-99cb-0f7752e1eaf4) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/d20e64c7-f84c-4ca2-91cf-705e0987cb4e)
 
-Gain only zoomed histogram
-
-![image](https://github.com/seansteel3/ML_trader/assets/67161057/ed97e2fc-5250-42e3-ad43-9d9657540bc6)
 
 Neg30 only histogram
 
-![image](https://github.com/seansteel3/ML_trader/assets/67161057/4b7636b3-1522-4c23-9c03-ef53b837fa13)
+![image](https://github.com/seansteel3/ML_trader/assets/67161057/55515114-887e-45d8-9a3e-2013b12cd868) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/8fa4ddb2-30b2-4c61-800f-ea3843e866df)
 
-Neg30 only zoomed histogram
 
-![image](https://github.com/seansteel3/ML_trader/assets/67161057/0c0cd0c6-7048-4204-aa91-72db82c7c2d3)
 
 Both histogram
 
-![image](https://github.com/seansteel3/ML_trader/assets/67161057/63abdccb-792f-423c-9922-56e9db14272d)
+![image](https://github.com/seansteel3/ML_trader/assets/67161057/9a94bda6-2e33-4c46-96ef-24d30cf1b7f6) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/6e889f7f-c48f-4477-ab6c-c77eba213af4)
 
-Both Zoomed Historgram
 
-![image](https://github.com/seansteel3/ML_trader/assets/67161057/391247a2-e9b2-4794-b745-702e896909be)
 
 6 month porfolio returns
 
