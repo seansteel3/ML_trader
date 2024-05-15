@@ -78,11 +78,9 @@ Gain10 ROC-AUC
 
 Random Returns histogram
 
-![image](https://github.com/seansteel3/ML_trader/assets/67161057/b1b22dc1-ffc6-448a-a6f7-f416c4ca99ac)
+![image](https://github.com/seansteel3/ML_trader/assets/67161057/ed1446dc-0b85-47e2-b96e-49ca61a726a1) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/23751d75-bdb2-4e8b-854d-f9442423ff17)
 
-Random returns zoomed histogram
 
-![image](https://github.com/seansteel3/ML_trader/assets/67161057/c7a3cd12-1fa4-4891-92a9-da6caa2a0543)
 
 Gain only returns histogram
 
