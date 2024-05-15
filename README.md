@@ -128,7 +128,7 @@ Average returns overtime Dual Model Vs Market only
 
 Ensemble visuals
 
-![image](https://github.com/seansteel3/ML_trader/assets/67161057/106f1441-a5fe-417a-81d8-58290b6217f7) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/86e2e675-8bcc-4968-a6d7-24113a5c0995) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/f9cb51dd-fbd4-4181-af02-24fd5490a2f3) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/0c0cb43c-363b-4cd7-972c-052a81fd8c06)
+![image](https://github.com/seansteel3/ML_trader/assets/67161057/106f1441-a5fe-417a-81d8-58290b6217f7)![image](https://github.com/seansteel3/ML_trader/assets/67161057/86e2e675-8bcc-4968-a6d7-24113a5c0995) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/f9cb51dd-fbd4-4181-af02-24fd5490a2f3)![image](https://github.com/seansteel3/ML_trader/assets/67161057/0c0cb43c-363b-4cd7-972c-052a81fd8c06)
 
 #Postive Market Period Returns
 
