@@ -124,6 +124,10 @@ Ensemble visuals
 
 ![image](https://github.com/seansteel3/ML_trader/assets/67161057/c8cac5ba-7d78-4c9e-a599-e363294f98a2)
 
+#All range returns
+
+![image](https://github.com/seansteel3/ML_trader/assets/67161057/2596c7c8-2ea3-47cd-a6b1-7df4befb57b3)
+
 
 
 <!-- TABLE OF CONTENTS -->
