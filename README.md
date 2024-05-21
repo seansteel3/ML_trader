@@ -42,7 +42,7 @@ The moving averages, Bollinger bands, average true ranges, and MACD were normali
 
 | ![image](https://github.com/seansteel3/ML_trader/assets/67161057/63709f52-e8a0-4404-8872-c505a973f78c) FIGURE 1|
 |:--:| 
-| *Full Data Sourcing and Model Optimization Pipeline* |
+| *Data Sourcing Pipeline* |
 
 Separate feature selection pipelines were then run on both the models predicting the probability of gaining 10% (Gain10) in value and the models predicting loss of 30% (Neg30) in value to reduce sources of noise and the chance of overfitting. Features were selected by fitting a random forest model on the balanced training data set with max depth of 4 and 250 trees, then keeping features which had a cumulative feature importance between 90-91%. Duplicate features coming from the metrics and ratios APIs were then removed if present.
 
