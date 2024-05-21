@@ -25,7 +25,6 @@ Phase 1 models also contained a shortcoming where securities incorrectly predict
 The increased data quality, and the addition of the new negative model ensemble, results in a system which greatly outperforms random guessing, and roughly matches the market’s overall returns on average during the test date range. 
 
 
-
 <!-- Methods -->
 ## Methods
 
@@ -68,9 +67,21 @@ All final scores and assessments after model optimization was calculated from pr
 |:--:| 
 | *FIGURE 3: Full model optimization pipelines* |
 
+Average “voting” was used for the final predictions of each ensemble. A security is chosen as a “buy” with the new system by receiving a prediction of 1 from the Gain10 ensemble and a prediction of 0 from the Neg30 ensemble. This is interpreted as “the security is predicted to increase in value by 10% or more **within** the next 6 months AND predicted not to decrease in value by 30% or more at the **end** of 6 months.”
+
+More stringent criteria to make predictions, such as all model agreement or voting above some threshold, were not used as they were in Phase 1 as this increased the financial cost of incorrect predictions. For example, increasing the prediction threshold of the Gain10 ensemble to be at least 0.75 from 0.5 also decreased the average return when the models were incorrect from -30% to -43%. Additionally chaining together any variation of “stringency” between the Gain10 and Neg30 predictions resulted in a very small set  which could not be used for back testing reliably.
 
 <!-- Backtesting -->
 ### Backtesting
+
+Backtests compared the trading results of old Phase 1 Gain10 ensemble, the new Gain10 ensemble, new Neg30 ensemble, and the new Gain10 + Neg30 (Dual Model) ensembles. Additionally, a pool of “all winning” securities was tested to see the theoretical maximum returns if the models had 100% accuracy, as well all the returns of investing in random securities as a baseline. Backtests were also run with the S&P 500 and the Invesco QQQ index as market return proxies. All portfolios in backtests, except for the market proxies, held 15 securities initialized with an even allocation of $10,000.
+
+Two backtest methods were used, one included “random start” 6 month portfolios where securities chosen under the above ensemble predictions and/or conditions were purchased, and sold if they increased in value by 10% or all securities sold after 6 months. This generated histograms and average return metrics to see what trading any given 6 month period may look like during the test date range (1/1/2022 to 10/25/2023). 
+
+The second backtest method began all the above ensemble predictions and/or conditions by initializing each of them with 50 random portfolios on 1/1/2022, and plotting out their daily returns until the end of the test range on 10/25/2023. However, since the overall market on 1/1/2022 was at a near all time high, the majority of the time from 1/1/2022 to 10/25/2023 the market is in the red. Therefore this backtest method was repeated with a start date on 10/1/2022 (which is near a local market low) to see how the models perform during a mostly “bullish” market. This backtest method provides the nearest apples-to-apples comparison between market proxies and the machine learning based portfolios.
+
+A final backtest was conducted by rebuilding the models and testing them similar to the 5-fold cross validation split. In this back test, models were built under the 1st training fold then used to predict the next testing fold. For instance, models were initially trained from 1/1/2013 to 12/31/2015 and then used to predict each strategy from 1/1/2016 until 112/31/2017 as a “test” set. The test set was collapsed into a new training set and the next 2 year period was predicted as a “test” set. The predicted unseen test sets were all concatenated into one data frame where predictions were all made on “unseen” data, but over the period from 1/1/2016 until 10/25/2023. 
+
 
 <!-- Results -->
 ## Results
