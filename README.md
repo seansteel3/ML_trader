@@ -1,5 +1,37 @@
 # ML_trader
 An upgrade to the original random trader analysis, now including ML models.
+
+<!-- Important Notice -->
+## Important Notice
+
+The basis of this project is exploring applications of machine learning. The investment and financial setting was chosen for this exploration due to data availability and interest. Therefore nothing in this repo should be taken as financial advice. In general, when it comes to investing, past performance cannot predict future success, and small errors in analysis can result in dramatic shifts in expected performance. This repo is academic in nature and should NOT be used as the basis for any legitimate investment strategy.
+
+<!-- Summary -->
+## Summary
+
+<!-- Introduction -->
+## Introduction
+
+Phase 0 of this project simulated Burton Malkiel’s blindfolded monkey from A Random Walk Down Wall Street by selecting securities at random to build an investment portfolio using Football Joe’s publicly available list of securities on Kaggle. That analysis roughly upheld Malkiel’s conclusions and also revealed that a small scale “retail investment money” can slightly improve its returns on average if it sells and replaces its randomly chosen securities if they increase in value by 10% or after 6 months. Though the quality of the data used was dubious at best and seemed to contain numerous errors. 
+
+Phase 1 of the ML trader project expanded upon the idea of selling securities if they increase in value by 10% or after 6 months, by incorporating machine learning models to predict if a security will increase in value by 10%. The data for phase 1 was sourced from python’s yfinance library and included a series of technical indicators built off of the standard daily OLHCV (open, low, high, close, volume) data for about 5000 tickers. This data was also restricted to only include securities greater than $2 and less than $100 to simulate reasonable investment options for a small scale “retail money investor.” 
+
+The current Phase 2 project addresses several key failings of Phase 1 and reworks the machine learning models accordingly. Phase 2 of the project also removes the “small retail monkey” restriction and enables sales of any security so long as its price is below $800. 
+
+The reliability of OLHCV yfinance data is surprisingly high for a free service, but does end up having significant inconsistencies and unexpected issues particularly when tickers are delisted and later relisted for a new company. To increase reliability of the overall data, the financialmodelingprep (FMP) APIs were used to identify and download OLHCV ~7000 currently tradable securities and another ~5000 delisted securities. Additionally, FMP enabled expansion of the dataset to include a series of about 80 fundamental financial ratios and metrics sourced from annual and quarterly reports from the companies. Further, the backtesting during Phase 1 had a serious error where securities were sold at their highs instead of at their 10% thresholds, which significantly biased the returns upwards. Phase 2 backtesting and the added return analysis corrects this mistake, and extends the simulations further for better apples to apples comparisons to market indices.
+
+Phase 1 models also contained a shortcoming where securities incorrectly predicted to buy tended to lose substantially more value (-35% compared to -20% average returns with random guessing in the test set) on average. Which meant that while the models did tend to be far more accurate than random guessing at picking securities that increased in value by 10%, the gains from this accuracy were almost entirely negated by the increased loss of value when the models were wrong. Phase 2 addresses this problem by building an ensemble of models to predict if securities will drop in value by 30% or more at the end of a 6 month trading period. 
+
+The increased data quality, and the addition of the new negative model ensemble, results in a system which greatly outperforms random guessing, and roughly matches the market’s overall returns on average during the test date range. 
+
+
+
+<!-- Methods -->
+## Methods
+
+<!-- Results -->
+## Results
+
 ![image](https://github.com/seansteel3/ML_trader/assets/67161057/63709f52-e8a0-4404-8872-c505a973f78c)
 
 ![image](https://github.com/seansteel3/ML_trader/assets/67161057/3166083a-6c07-4719-852c-380c6386aa6f)
