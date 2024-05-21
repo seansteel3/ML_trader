@@ -40,19 +40,19 @@ The moving averages, Bollinger bands, average true ranges, and MACD were normali
 
 
 
-| ![image](https://github.com/seansteel3/ML_trader/assets/67161057/63709f52-e8a0-4404-8872-c505a973f78c) FIGURE 1|
+| ![image](https://github.com/seansteel3/ML_trader/assets/67161057/63709f52-e8a0-4404-8872-c505a973f78c) |
 |:--:| 
-| *Data Sourcing Pipeline* |
+| *FIGURE 1: Data Sourcing Pipeline* |
 
 Separate feature selection pipelines were then run on both the models predicting the probability of gaining 10% (Gain10) in value and the models predicting loss of 30% (Neg30) in value to reduce sources of noise and the chance of overfitting. Features were selected by fitting a random forest model on the balanced training data set with max depth of 4 and 250 trees, then keeping features which had a cumulative feature importance between 90-91%. Duplicate features coming from the metrics and ratios APIs were then removed if present.
 
-| ![image](https://github.com/seansteel3/ML_trader/assets/67161057/3166083a-6c07-4719-852c-380c6386aa6f=320x320) FIGURE 2a|
+| ![image](https://github.com/seansteel3/ML_trader/assets/67161057/3166083a-6c07-4719-852c-380c6386aa6f=320x320) |
 |:--:| 
-| *Final feature importances for the Gain10 Ensemble from the final optimized Random Forest model* |
+| *FIGURE 2a: Final feature importances for the Gain10 Ensemble from the final optimized Random Forest model* |
 
 | ![image](https://github.com/seansteel3/ML_trader/assets/67161057/ce0f94cf-6199-432b-9989-9237c03b26c4=320x320) FIGURE 2a|
 |:--:| 
-| *Final feature importances for the Gain10 Ensemble from the final optimized Random Forest model* |
+| *FIGURE 2b: Final feature importances for the Neg30 Ensemble from the final optimized Random Forest model* |
 
 
 <!-- Results -->
