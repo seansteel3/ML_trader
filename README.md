@@ -140,13 +140,21 @@ Since no resampling requires calibration of the threshold to denote a prediction
 For the Gain10 ensemble, the overall average accuracy across all 5 cross validation folds was highest when setting the threshold using the imbalanced average ROC threshold (imbalanced ROC Accuracy = 66.16%). Meanwhile, the balanced ROC and balanced training mean thresholds all hovered around 64%. However, in the case of predicting if a security will increase in value, the positive precision score is more important than overall accuracy and in this case using the balanced data’s ROC threshold had the highest precision (74.91%) vs the imbalanced data’s ROC threshold (74.02%). 
 
 
-| ![image](https://github.com/seansteel3/ML_trader/assets/67161057/c62cc6a6-5b62-4d8b-87a6-d392b1c4d429) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/bb8ce620-3b89-488e-9709-730ba43b15ba) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/ff390135-ddd3-4a75-8949-0ef1ed5c2063)|
+| ![image](https://github.com/seansteel3/ML_trader/assets/67161057/bb8ce620-3b89-488e-9709-730ba43b15ba) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/ff390135-ddd3-4a75-8949-0ef1ed5c2063)|
 |:--:| 
-| *FIGURE 7a: Average thresholds to declare class 1 for the Gain10 ensemble for each of the 5 cross validation folds (fold 1 is in blue, fold 2 in orange, fold 3 in green fold 4 in red, fold 5 in purple). Followed by average accuracy and postive precision from 5-fold time series cross validation* |
+| *FIGURE 7a: Average accuracy and postive precision from 5-fold time series cross validation* |
+
+For the Neg30 ensemble the overall average accuracy across all 5 cross validation folds was also highest setting the threshold using threshold using the imbalanced average ROC threshold (imbalanced ROC Accuracy = 74.12%). However, in the case of predicting if a security will decrease in value, negative precision is more important than overall accuracy, and using the imbalanced data’s training mean to set the threshold for class 1 resulted in the highest negative precision (90.63%) compared to the imbalanced ROC threshold (86.72%) with the balanced training mean not far behind in second place (90.26%).
 
 | ![image](https://github.com/seansteel3/ML_trader/assets/67161057/ccd86737-d823-4b9d-b349-a459a3bffa5b) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/61a1265e-3c0a-4852-a4ff-d3e3146ce274) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/eae7f2fa-acfe-4ca6-b8d2-cb2c93652d6a)|
 |:--:| 
-| *FIGURE 7b: Average thresholds to declare class 1 for the Neg30 ensemble for each of the 5 cross validation folds (fold 1 is in blue, fold 2 in orange, fold 3 in green fold 4 in red, fold 5 in purple). Followed by average accuracy and negative precision from 5-fold time series cross validation* |
+| *FIGURE 7b: Average accuracy and negative precision from 5-fold time series cross validation* |
+
+Additionally, setting thresholds for class 1 prediction using either imbalanced training data’s mean, or using ROC threshold averages can be noisy and can vary overtime. Figure 8 below shows the Gain10 and Neg30 ensemble threshold values for each of the 5 cross validation folds with light blue bars equal to fold 1, orange fold 2, green fold 3, red fold 4, and purple fold 5. Since only the balanced training mean’s thresholds are perfectly constant overtime, and since the balanced training mean’s respective precision scores were nearly as high or better than any alternatives, the data for the final models was balanced by random under-sampling. Random under-sampling was also chosen over the slightly better preforming SMOTE-Undersampling hybrid due to its massively lower computational resource requirement. 
+
+| ![image](https://github.com/seansteel3/ML_trader/assets/67161057/c62cc6a6-5b62-4d8b-87a6-d392b1c4d429) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/ccd86737-d823-4b9d-b349-a459a3bffa5b)|
+|:--:| 
+| *FIGURE 8: Average thresholds to declare class 1 for the Gain10 and Neg30 ensembles for each of the 5 cross validation folds (fold 1 is in blue, fold 2 in orange, fold 3 in green fold 4 in red, fold 5 in purple). * |
 
 <!-- Final Model Construction -->
 ### Final Model Construction
@@ -161,45 +169,6 @@ For the Gain10 ensemble, the overall average accuracy across all 5 cross validat
 ### Backtesting: Returns Overtime
 
 
-
-gain10 transformer scores 
-
-
-
-neg30 transformer scores
-
-
-
-
-k-fold AUC Gain10 resampling scores
-
-
-
-k-fold AUC neg30 resampling scores
-
-
-
-Neg30: ROC/Mean thresholds for class 1
-
-
-
-Neg30: Average Accuracy by Threshold Strat
-
-
-
-Neg30: Average Negative Precision by Threshold Strat
-
-
-
-Gain10: ROC/Mean thresholds for class 1
-
-
-
-Gain10: Average Accuracy by Threshold Strat
-
-
-
-Gain10: Average Precision by Threshold Strat
 
 
 
