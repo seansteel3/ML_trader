@@ -86,12 +86,40 @@ A final backtest was conducted by rebuilding the models and testing them similar
 <!-- Results -->
 ## Results
 
+<!-- Data Stationarity -->
+### Data Stationarity
+
+All features chosen to be included in the final models were tested by the Augmented-Dickey-Fuller test for the presence of a unit root as a check for stationarity (Figure 2). The Augmented Dickey-Fuller test was able to reject the presence of a unit root, and therefore an obvious trend, at the 1% significance level following a bonferroni multiple testing correction. 
+
+Despite the lack a statistical trend overtime, visual inspection of the features does show rather strong seasonality in the scale of months, quarters, or even years across most features. However, in this context of classification forecasting, trends overtime are likely to be more destructive to machine learning models than seasonality, so this type of non-stationary data will not inherently destroy the model’s ability to generalize to unseen data. It will require the models to learn this seasonality in order to preform optimally since no seasonal adjustments or decompositions were preformed.
 
 
+| ![image](https://github.com/seansteel3/ML_trader/assets/67161057/3bd8786a-8e45-40ce-a597-ca8be0a2b8cd) |
+|:--:| 
+| *FIGURE 4: Augmented Dickey-Fuller test results on included features* |
+
+<!-- Feature Selection -->
+### Feature Selection
+
+<!-- Data Standardization -->
+### Data Standardization
+
+<!-- Data Resampling -->
+### Data Resampling
+
+<!-- Final Model Construction -->
+### Final Model Construction
+
+<!-- Individual Returns Analysis -->
+### Individual Returns Analysis
+
+<!-- Backtesting: Six Month Portfolio Returns -->
+### Backtesting: Six Month Portfolio Returns 
+
+<!-- Backtesting: Returns Overtime -->
+### Backtesting: Returns Overtime
 
 
-
-![image](https://github.com/seansteel3/ML_trader/assets/67161057/3bd8786a-8e45-40ce-a597-ca8be0a2b8cd)
 
 gain10 transformer scores 
 
@@ -100,8 +128,6 @@ gain10 transformer scores
 neg30 transformer scores
 
 ![image](https://github.com/seansteel3/ML_trader/assets/67161057/77b7e513-7161-4f46-95ac-d5bf13dff904)
-
-optimization flow chart
 
 
 
