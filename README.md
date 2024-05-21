@@ -130,6 +130,10 @@ Upsampling of the minority class was done by SMOTE, Borderline SMOTE-1, and ADAS
 
 For the Gain10 ensemble, no resampling (imbalanced data) had the highest ROC-AUC (0.6661) followed extremely closely by random under sampling and SMOTE and the Under-SMOTE hybrid. For the Neg30 ensemble, ROC-AUCs were all very tight with no resampling having the highest score (0.7565). 
 
+| ![image](https://github.com/seansteel3/ML_trader/assets/67161057/eb2ca336-a6e3-42c2-9ac1-7770674ce1fb) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/654990df-7c9b-4dad-b5d5-c93ac1afaf29)  |
+|:--:| 
+| *FIGURE 6: Average ROC-AUC scores form 5-fold time series cross validation for various resampling strategies* |
+
 
 <!-- Final Model Construction -->
 ### Final Model Construction
@@ -156,11 +160,11 @@ neg30 transformer scores
 
 k-fold AUC Gain10 resampling scores
 
-![image](https://github.com/seansteel3/ML_trader/assets/67161057/eb2ca336-a6e3-42c2-9ac1-7770674ce1fb)
+
 
 k-fold AUC neg30 resampling scores
 
-![image](https://github.com/seansteel3/ML_trader/assets/67161057/654990df-7c9b-4dad-b5d5-c93ac1afaf29)
+
 
 Neg30: ROC/Mean thresholds for class 1
 
