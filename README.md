@@ -50,10 +50,27 @@ Separate feature selection pipelines were then run on both the models predicting
 |:--:| 
 | *FIGURE 2a: Final feature importances for the Gain10 Ensemble from the final optimized Random Forest model* |
 
-| ![image](https://github.com/seansteel3/ML_trader/assets/67161057/ce0f94cf-6199-432b-9989-9237c03b26c4=320x320) FIGURE 2a|
+| ![image](https://github.com/seansteel3/ML_trader/assets/67161057/ce0f94cf-6199-432b-9989-9237c03b26c4=320x320) |
 |:--:| 
 | *FIGURE 2b: Final feature importances for the Neg30 Ensemble from the final optimized Random Forest model* |
 
+
+<!-- Model Construction -->
+### Model Construction
+
+Two ANN models (one with ReLU activations and one with Tanh), one random forest, one xgboost, and one logistic regression were created to make each ensemble. Training data included all data from 1/1/2012 to 12/31/2021, subset to the aforementioned best features for each ensemble. The ANN architectures were optimized in 2 stages. The first stage leveraged Keras hyperband tuner over a grid search of hidden layer sizes and depths across the entire training dataset. While the second stage tested the best three architectures from the hyperband tuner using a 5-fold time series cross validation. Meanwhile, tree based model architectures were chosen by a “funneled grid search” over an array of parameters. 
+
+All models were optimized by the ROC-AUC metric, and used the relevant precision score for any near tie-breakers if needed. The relevant precision score for the Gain10 ensemble was the standard precision = True Positive Class / (True Positive Class + Predicted Positive Class) while the precision score for the Neg30 ensemble was “negative precision” = True Zero Class / (True Zero Class + Predicted Zero Class). 
+
+All final scores and assessments after model optimization was calculated from predictions made on unseen balanced test data in the date range from 1/1/2022 to 10/25/2023. 
+
+| ![image](https://github.com/seansteel3/ML_trader/assets/67161057/ce0f94cf-6199-432b-9989-9237c03b26c4) |
+|:--:| 
+| *FIGURE 3: Full model optimization pipelines* |
+
+
+<!-- Backtesting -->
+### Backtesting
 
 <!-- Results -->
 ## Results
@@ -62,7 +79,6 @@ Separate feature selection pipelines were then run on both the models predicting
 
 
 
-![image](https://github.com/seansteel3/ML_trader/assets/67161057/ce0f94cf-6199-432b-9989-9237c03b26c4)
 
 ![image](https://github.com/seansteel3/ML_trader/assets/67161057/3bd8786a-8e45-40ce-a597-ca8be0a2b8cd)
 
