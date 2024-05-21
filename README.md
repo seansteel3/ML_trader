@@ -64,7 +64,7 @@ All models were optimized by the ROC-AUC metric, and used the relevant precision
 
 All final scores and assessments after model optimization was calculated from predictions made on unseen balanced test data in the date range from 1/1/2022 to 10/25/2023. 
 
-| ![image](https://github.com/seansteel3/ML_trader/assets/67161057/ce0f94cf-6199-432b-9989-9237c03b26c4) |
+| ![image](https://github.com/seansteel3/ML_trader/assets/67161057/197c8f72-e7a4-4b74-bf75-e43fb77bc9de) |
 |:--:| 
 | *FIGURE 3: Full model optimization pipelines* |
 
@@ -92,7 +92,7 @@ neg30 transformer scores
 
 optimization flow chart
 
-![image](https://github.com/seansteel3/ML_trader/assets/67161057/197c8f72-e7a4-4b74-bf75-e43fb77bc9de)
+
 
 k-fold AUC Gain10 resampling scores
 
