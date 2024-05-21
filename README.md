@@ -45,15 +45,6 @@ The moving averages, Bollinger bands, average true ranges, and MACD were normali
 
 Separate feature selection pipelines were then run on both the models predicting the probability of gaining 10% (Gain10) in value and the models predicting loss of 30% (Neg30) in value to reduce sources of noise and the chance of overfitting. Features were selected by fitting a random forest model on the balanced training data set with max depth of 4 and 250 trees, then keeping features which had a cumulative feature importance between 90-91%. Duplicate features coming from the metrics and ratios APIs were then removed if present.
 
-| ![image](https://github.com/seansteel3/ML_trader/assets/67161057/3166083a-6c07-4719-852c-380c6386aa6f=320x320) |
-|:--:| 
-| *FIGURE 2a: Final feature importances for the Gain10 Ensemble from the final optimized Random Forest model* |
-
-| ![image](https://github.com/seansteel3/ML_trader/assets/67161057/ce0f94cf-6199-432b-9989-9237c03b26c4=320x320) |
-|:--:| 
-| *FIGURE 2b: Final feature importances for the Neg30 Ensemble from the final optimized Random Forest model* |
-
-
 <!-- Model Construction -->
 ### Model Construction
 
@@ -65,7 +56,7 @@ All final scores and assessments after model optimization was calculated from pr
 
 | ![image](https://github.com/seansteel3/ML_trader/assets/67161057/197c8f72-e7a4-4b74-bf75-e43fb77bc9de) |
 |:--:| 
-| *FIGURE 3: Full model optimization pipelines* |
+| *FIGURE 2: Full model optimization pipelines* |
 
 Average “voting” was used for the final predictions of each ensemble. A security is chosen as a “buy” with the new system by receiving a prediction of 1 from the Gain10 ensemble and a prediction of 0 from the Neg30 ensemble. This is interpreted as “the security is predicted to increase in value by 10% or more **within** the next 6 months AND predicted not to decrease in value by 30% or more at the **end** of 6 months.”
 
@@ -96,13 +87,35 @@ Despite the lack a statistical trend overtime, visual inspection of the features
 
 | ![image](https://github.com/seansteel3/ML_trader/assets/67161057/3bd8786a-8e45-40ce-a597-ca8be0a2b8cd) |
 |:--:| 
-| *FIGURE 4: Augmented Dickey-Fuller test results on included features* |
+| *FIGURE 3: Augmented Dickey-Fuller test results on included features* |
 
 <!-- Feature Selection -->
 ### Feature Selection
 
+Features for both the Gain10 and Neg30 models were selected by fitting a random forest with 250 trees and a max depth of 4 over the entire training dataset. The features with a cumulative importance score of <0.91 were kept and the rest discarded. Figure 3 shows the features importance scores on the final random forest model for illustration. 
+
+| ![image](https://github.com/seansteel3/ML_trader/assets/67161057/3166083a-6c07-4719-852c-380c6386aa6f=320x320) |
+|:--:| 
+| *FIGURE 4a: Final feature importances for the Gain10 Ensemble from the final optimized Random Forest model* |
+
+| ![image](https://github.com/seansteel3/ML_trader/assets/67161057/ce0f94cf-6199-432b-9989-9237c03b26c4=320x320) |
+|:--:| 
+| *FIGURE 4b: Final feature importances for the Neg30 Ensemble from the final optimized Random Forest model* |
+
+
 <!-- Data Standardization -->
 ### Data Standardization
+
+Due to limited available compute power and its straightforward approach, Phase 1 removed outliers then standardized the data to have a mean of 0 and variance 1 using SKLearn’s StandardScaler. However, its likely the outliers which were removed during Phase 1 were “true” outliers, not errors in the data, and therefore should not have been deleted. 
+
+Thus for phase 2 no outliers were removed and SKLearn’s quantile transformer with either uniform or normal distributions, SKLearn’s RobustScaler, and StandardScaler were tested using a 5-Fold time series cross-validation. All reported metrics were calculated as the mean of the metric across each of the 5-Folds. Data for both the training and validation was rescaled by random under sampling to ensure the baseline value that equates to random guessing for all metrics would be 0.5.
+
+For assessment, a basic ANN (artificial neural network) with 2 hidden layers (10-5), ReLU activation, and the same weight initialization for all experiments was used. This configuration was chosen since ANN’s are highly sensitive to the scale of input data. The primary metric of consideration was the ROC-AUC metric, but the positive precision score and negative precision scores were used in “near tie” cases for the Gain10 and Neg30 models respectively. 
+
+For the Gain10 model, the quantile transformer - normal distribution had both the highest AUC (0.658) and positive precision (68.0%) with the quantile transformer - uniform distribution following closely behind (AUC: 0.654, positive precision: 67.4%).  Meanwhile the Neg30 model had the highest ROC-AUC with the quantile transformer - normal distribution (0.754) but third highest negative precision (75.6%). The RobustScaler had the lowest ROC-AUC (0.698) but highest negative precision (77.7%). 
+
+Since the ROC-AUC score was highest, and the negative precision fairly high, and since the same style transformer was best for the Gain10 model, the quantile transformer - normal distribution was chosen as the rescaling method for both models (fit separately for each ensemble). 
+
 
 <!-- Data Resampling -->
 ### Data Resampling
