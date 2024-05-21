@@ -144,6 +144,10 @@ For the Gain10 ensemble, the overall average accuracy across all 5 cross validat
 |:--:| 
 | *FIGURE 7a: Average thresholds to declare class 1 for the Gain10 ensemble for each of the 5 cross validation folds (fold 1 is in blue, fold 2 in orange, fold 3 in green fold 4 in red, fold 5 in purple). Followed by average accuracy and postive precision from 5-fold time series cross validation* |
 
+| ![image](https://github.com/seansteel3/ML_trader/assets/67161057/ccd86737-d823-4b9d-b349-a459a3bffa5b) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/61a1265e-3c0a-4852-a4ff-d3e3146ce274) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/eae7f2fa-acfe-4ca6-b8d2-cb2c93652d6a)|
+|:--:| 
+| *FIGURE 7b: Average thresholds to declare class 1 for the Neg30 ensemble for each of the 5 cross validation folds (fold 1 is in blue, fold 2 in orange, fold 3 in green fold 4 in red, fold 5 in purple). Followed by average accuracy and negative precision from 5-fold time series cross validation* |
+
 <!-- Final Model Construction -->
 ### Final Model Construction
 
@@ -177,15 +181,15 @@ k-fold AUC neg30 resampling scores
 
 Neg30: ROC/Mean thresholds for class 1
 
-![image](https://github.com/seansteel3/ML_trader/assets/67161057/ccd86737-d823-4b9d-b349-a459a3bffa5b)
+
 
 Neg30: Average Accuracy by Threshold Strat
 
-![image](https://github.com/seansteel3/ML_trader/assets/67161057/61a1265e-3c0a-4852-a4ff-d3e3146ce274)
+
 
 Neg30: Average Negative Precision by Threshold Strat
 
-![image](https://github.com/seansteel3/ML_trader/assets/67161057/eae7f2fa-acfe-4ca6-b8d2-cb2c93652d6a)
+
 
 Gain10: ROC/Mean thresholds for class 1
 
