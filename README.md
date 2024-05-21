@@ -124,6 +124,13 @@ Since the ROC-AUC score was highest, and the negative precision fairly high, and
 <!-- Data Resampling -->
 ### Data Resampling
 
+Following model architecture optimization, which was conducted with data balanced by random under sampling, various methods to address class imbalance were tested using the average ROC-AUC metric computed across the same 5-fold time series cross validation. The ROC-AUC metric also corresponds to the ROC-AUC of the entire 5 model ensembles (2 ANNs, 1 Random Forest, 1 XGBoost, 1 Logistic regression).
+
+Upsampling of the minority class was done by SMOTE, Borderline SMOTE-1, and ADASYN, while down sampling of the majority class was done only by random under-sampling. One hybrid method of random under-sampling bridging 90% of the class imbalance followed by SMOTE upsampling was also tested. All of these resampling methods were compared to the ROC-AUC scores of unbalanced data.
+
+For the Gain10 ensemble, no resampling (imbalanced data) had the highest ROC-AUC (0.6661) followed extremely closely by random under sampling and SMOTE and the Under-SMOTE hybrid. For the Neg30 ensemble, ROC-AUCs were all very tight with no resampling having the highest score (0.7565). 
+
+
 <!-- Final Model Construction -->
 ### Final Model Construction
 
