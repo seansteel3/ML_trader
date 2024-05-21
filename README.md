@@ -154,7 +154,7 @@ Additionally, setting thresholds for class 1 prediction using either imbalanced 
 
 | ![image](https://github.com/seansteel3/ML_trader/assets/67161057/c62cc6a6-5b62-4d8b-87a6-d392b1c4d429) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/ccd86737-d823-4b9d-b349-a459a3bffa5b)|
 |:--:| 
-| *FIGURE 8: Average thresholds to declare class 1 for the Gain10 and Neg30 ensembles for each of the 5 cross validation folds (fold 1 is in blue, fold 2 in orange, fold 3 in green fold 4 in red, fold 5 in purple). * |
+| *FIGURE 8: Average thresholds to declare class 1 for the Gain10 and Neg30 ensembles for each of the 5 cross validation folds (fold 1 is in blue, fold 2 in orange, fold 3 in green fold 4 in red, fold 5 in purple).* |
 
 <!-- Final Model Construction -->
 ### Final Model Construction
