@@ -29,10 +29,21 @@ The increased data quality, and the addition of the new negative model ensemble,
 <!-- Methods -->
 ## Methods
 
+<!-- Data -->
+### Data
+
+The financialmodelingprep (FMP) API was used to source all tradable and delisted tickers on the NYSE, NASDAQ, and ASE using the available-traded and delisted-companies endpoints respectively. OLHCV (open, low, high, close, volume) data was then collected from the FMP historical-price-full endpoint and a collection of 80 fundamental metrics and ratios were collected from the FMP key-metrics and ratios endpoints respectively. Duplicated features from these endpoints were removed. All subsequent analysis and training was completed only on data where both quarterly financial data and OLHCV data was available for at least 18 months (1 year required for training, an additional 6 months required for testing).
+
+The OLHCV data was not directly used in any modeling, but rather transformed into a series of common technical indicators to be used as features. Moving averages, Bollinger bands, minmax ratios, daily moving average true ranges, moving historical volatility (standard deviation), stochastic oscillators, MACD, RSI, and AROON indicators were all built with 3 time variations of 21, 84, and 252 previous consecutive trading day periods as proxies for 1, 4 and 12 months. Average directional index was also calculated, but at only the 21 day period.
+
+The moving averages, Bollinger bands, average true ranges, and MACD were normalized by dividing by the daily close since they are all natively in the scale of the close price. Following normalization, all features were checked for presence of a trend (presence of a unit root) using the Augmented Dickey-Fuller test. Data was then rescaled using SKlearn’s quantile transformer, though SKlearn’s StandardScaler and RobustScaler were tested but were less effective. Finally, the input data was rebalanced using random under sampling, which was the most effective rebalancing method compared to a series of other balancing techniques. Final assessment of all relevant metrics occurred occasionally on balanced validation or test data where appropriate, or otherwise on unbalanced testing data.
+
+![image](https://github.com/seansteel3/ML_trader/assets/67161057/63709f52-e8a0-4404-8872-c505a973f78c)
+
 <!-- Results -->
 ## Results
 
-![image](https://github.com/seansteel3/ML_trader/assets/67161057/63709f52-e8a0-4404-8872-c505a973f78c)
+
 
 ![image](https://github.com/seansteel3/ML_trader/assets/67161057/3166083a-6c07-4719-852c-380c6386aa6f)
 
