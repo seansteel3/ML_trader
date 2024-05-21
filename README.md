@@ -132,8 +132,17 @@ For the Gain10 ensemble, no resampling (imbalanced data) had the highest ROC-AUC
 
 | ![image](https://github.com/seansteel3/ML_trader/assets/67161057/eb2ca336-a6e3-42c2-9ac1-7770674ce1fb) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/654990df-7c9b-4dad-b5d5-c93ac1afaf29)  |
 |:--:| 
-| *FIGURE 6: Average ROC-AUC scores form 5-fold time series cross validation for various resampling strategies* |
+| *FIGURE 6: Average ROC-AUC scores from 5-fold time series cross validation for various resampling strategies for the Gain10 and Neg30 ensembles* |
 
+
+Since no resampling requires calibration of the threshold to denote a prediction as class 1 or class 0, the thresholds for each of the 5 cross validation folds were explored. Using the average ROC curve threshold and the average proportion of class 1 in the training data are commonly used methods of setting the threshold to denote a predicted class 1. These two methods were compared against each other and to random under sampling as a control. For random under sampling the training mean threshold is always >= 0.5 results in class 1, while the ROC thresholding will oscillate slightly around 0.5.
+
+For the Gain10 ensemble, the overall average accuracy across all 5 cross validation folds was highest when setting the threshold using the imbalanced average ROC threshold (imbalanced ROC Accuracy = 66.16%). Meanwhile, the balanced ROC and balanced training mean thresholds all hovered around 64%. However, in the case of predicting if a security will increase in value, the positive precision score is more important than overall accuracy and in this case using the balanced data’s ROC threshold had the highest precision (74.91%) vs the imbalanced data’s ROC threshold (74.02%). 
+
+
+| ![image](https://github.com/seansteel3/ML_trader/assets/67161057/eb2ca336-a6e3-42c2-9ac1-7770674ce1fb) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/654990df-7c9b-4dad-b5d5-c93ac1afaf29)  |
+|:--:| 
+| *FIGURE 7a: Average thresholds to declare class 1 for the Gain10 ensemble, followed by average accuracy and postive precision from 5-fold time series cross validation * |
 
 <!-- Final Model Construction -->
 ### Final Model Construction
