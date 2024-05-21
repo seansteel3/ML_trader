@@ -40,7 +40,7 @@ The moving averages, Bollinger bands, average true ranges, and MACD were normali
 
 
 
-| ![image](https://github.com/seansteel3/ML_trader/assets/67161057/63709f52-e8a0-4404-8872-c505a973f78c) "FIGURE 1"|
+| ![FIGURE 1](https://github.com/seansteel3/ML_trader/assets/67161057/63709f52-e8a0-4404-8872-c505a973f78c)|
 |:--:| 
 | *Full Data Sourcing and Model Optimization Pipeline* |
 
