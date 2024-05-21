@@ -140,9 +140,9 @@ Since no resampling requires calibration of the threshold to denote a prediction
 For the Gain10 ensemble, the overall average accuracy across all 5 cross validation folds was highest when setting the threshold using the imbalanced average ROC threshold (imbalanced ROC Accuracy = 66.16%). Meanwhile, the balanced ROC and balanced training mean thresholds all hovered around 64%. However, in the case of predicting if a security will increase in value, the positive precision score is more important than overall accuracy and in this case using the balanced data’s ROC threshold had the highest precision (74.91%) vs the imbalanced data’s ROC threshold (74.02%). 
 
 
-| ![image](https://github.com/seansteel3/ML_trader/assets/67161057/eb2ca336-a6e3-42c2-9ac1-7770674ce1fb) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/654990df-7c9b-4dad-b5d5-c93ac1afaf29)  |
+| ![image](https://github.com/seansteel3/ML_trader/assets/67161057/c62cc6a6-5b62-4d8b-87a6-d392b1c4d429) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/bb8ce620-3b89-488e-9709-730ba43b15ba) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/ff390135-ddd3-4a75-8949-0ef1ed5c2063)|
 |:--:| 
-| *FIGURE 7a: Average thresholds to declare class 1 for the Gain10 ensemble, followed by average accuracy and postive precision from 5-fold time series cross validation * |
+| *FIGURE 7a: Average thresholds to declare class 1 for the Gain10 ensemble for each of the 5 cross validation folds (fold 1 is in blue, fold 2 in orange, fold 3 in green fold 4 in red, fold 5 in purple). Followed by average accuracy and postive precision from 5-fold time series cross validation* |
 
 <!-- Final Model Construction -->
 ### Final Model Construction
@@ -189,15 +189,15 @@ Neg30: Average Negative Precision by Threshold Strat
 
 Gain10: ROC/Mean thresholds for class 1
 
-![image](https://github.com/seansteel3/ML_trader/assets/67161057/c62cc6a6-5b62-4d8b-87a6-d392b1c4d429)
+
 
 Gain10: Average Accuracy by Threshold Strat
 
-![image](https://github.com/seansteel3/ML_trader/assets/67161057/bb8ce620-3b89-488e-9709-730ba43b15ba)
+
 
 Gain10: Average Precision by Threshold Strat
 
-![image](https://github.com/seansteel3/ML_trader/assets/67161057/ff390135-ddd3-4a75-8949-0ef1ed5c2063)
+
 
 Neg30 Heatmap w/balanced test set:
 
