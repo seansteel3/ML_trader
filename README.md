@@ -116,6 +116,10 @@ For the Gain10 model, the quantile transformer - normal distribution had both th
 
 Since the ROC-AUC score was highest, and the negative precision fairly high, and since the same style transformer was best for the Gain10 model, the quantile transformer - normal distribution was chosen as the rescaling method for both models (fit separately for each ensemble). 
 
+| ![image](https://github.com/seansteel3/ML_trader/assets/67161057/61fcdceb-474f-4a8e-b6cc-bc1438964342) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/77b7e513-7161-4f46-95ac-d5bf13dff904) |
+|:--:| 
+| *FIGURE 5: Metrics of interest for various rescaling techniques for both the Gain10 and Neg30 ensembles* |
+
 
 <!-- Data Resampling -->
 ### Data Resampling
@@ -136,11 +140,10 @@ Since the ROC-AUC score was highest, and the negative precision fairly high, and
 
 gain10 transformer scores 
 
-![image](https://github.com/seansteel3/ML_trader/assets/67161057/61fcdceb-474f-4a8e-b6cc-bc1438964342)
+
 
 neg30 transformer scores
 
-![image](https://github.com/seansteel3/ML_trader/assets/67161057/77b7e513-7161-4f46-95ac-d5bf13dff904)
 
 
 
