@@ -249,8 +249,7 @@ This final experiment confirms that the Gain10 model ensemble does in fact do ve
 
 | ![image](https://github.com/seansteel3/ML_trader/assets/67161057/106f1441-a5fe-417a-81d8-58290b6217f7) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/86e2e675-8bcc-4968-a6d7-24113a5c0995) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/f9cb51dd-fbd4-4181-af02-24fd5490a2f3) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/0c0cb43c-363b-4cd7-972c-052a81fd8c06) |
 |:--:|  
-| *Supplemental Figure: All 50 simulated portfolio returns from 1/1/2022 to 10/25/2023 
-Ensemble visuals. Shows typical expected return ranges for each strategy* |
+| *Supplemental Figure: Typical expected return ranges for each strategy from all 50 simulated portfolio returns between 1/1/2022 to 10/25/2023* |
 
 
 <!-- TABLE OF CONTENTS -->
