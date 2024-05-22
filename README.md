@@ -244,31 +244,13 @@ This final experiment confirms that the Gain10 model ensemble does in fact do ve
 | *FIGURE 13: All Market returns from 1/1/2016 to 10/25/2023* |
 
 
-Average returns over time
+<!-- Supplemental Figure -->
+### Supplemental Figure
 
-![image](https://github.com/seansteel3/ML_trader/assets/67161057/783c603c-c0d9-4fde-b0d2-09fa3eb0f4b6)
-
-
-Average returns overtime (No All Win)
-
-![image](https://github.com/seansteel3/ML_trader/assets/67161057/33bcb638-cfaf-44ba-912a-1bf9508590c4)
-
-Average returns overtime Dual Model Vs Market only
-
-![image](https://github.com/seansteel3/ML_trader/assets/67161057/3726e873-760a-4be7-8d7c-1f40c04bedc6)
-
-Ensemble visuals
-
-![image](https://github.com/seansteel3/ML_trader/assets/67161057/106f1441-a5fe-417a-81d8-58290b6217f7) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/86e2e675-8bcc-4968-a6d7-24113a5c0995) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/f9cb51dd-fbd4-4181-af02-24fd5490a2f3) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/0c0cb43c-363b-4cd7-972c-052a81fd8c06)
-
-#Postive Market Period Returns
-
-![image](https://github.com/seansteel3/ML_trader/assets/67161057/c8cac5ba-7d78-4c9e-a599-e363294f98a2)
-
-#All range returns
-
-![image](https://github.com/seansteel3/ML_trader/assets/67161057/2596c7c8-2ea3-47cd-a6b1-7df4befb57b3)
-
+| ![image](https://github.com/seansteel3/ML_trader/assets/67161057/106f1441-a5fe-417a-81d8-58290b6217f7) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/86e2e675-8bcc-4968-a6d7-24113a5c0995) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/f9cb51dd-fbd4-4181-af02-24fd5490a2f3) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/0c0cb43c-363b-4cd7-972c-052a81fd8c06) |
+|:--:|  
+| *Supplemental Figure: All 50 simulated portfolio returns from 1/1/2022 to 10/25/2023 
+Ensemble visuals. Shows typical expected return ranges for each strategy* |
 
 
 <!-- TABLE OF CONTENTS -->
