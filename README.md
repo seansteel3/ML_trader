@@ -159,6 +159,16 @@ Additionally, setting thresholds for class 1 prediction using either imbalanced 
 <!-- Final Model Construction -->
 ### Final Model Construction
 
+The final models were built with data transformed into a normal distribution centered around 0 with the QunatileTransformer - Normal distribution. Class imbalance removed by random under sampling of the majority class, and final architectures optimized by the “funneled grid search” shown in figure 2 above. Training of the final models was done by collapsing all 5-fold time series cross validation splits into 1 training set, then the following final metrics below were calculated twice, once on balanced data and once on imbalanced unadjusted data, using unseen test data ranging (1/1/2022 to 10/25/2023). 
+
+The final Gain10 ensemble saw an accuracy of 64.37% over balanced test data and 70.61% over the full imbalanced data. Its precision was 61.99% on balanced data and 78.09% on imbalanced data. In the imbalanced data, 69.7% of observations were class 1, making a precision of 78.09% represent 8.39 percentage point improvement over random guessing. Its negative precision is rather unimpressive (51.84%) but also not of concern in the setting where it will be used to predict securities to buy (predicted class 1). Its overall ROC-AUC score was 0.70.
+
+| ![image](https://github.com/seansteel3/ML_trader/assets/67161057/d4f63ecb-d244-439c-a130-a4d33e4c0f13) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/052334df-a29d-47ec-9371-b7951c2dddf7) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/806532c8-329f-479e-8684-4b01bbeddd52)|
+|:--:| 
+| *FIGURE 10a: Gain10 ensemble confusion matricies for balanced and imbalanced data, plus the plotted ROC curve* |
+
+
+
 <!-- Individual Returns Analysis -->
 ### Individual Returns Analysis
 
