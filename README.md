@@ -56,7 +56,7 @@ All final scores and assessments after model optimization was calculated from pr
 
 | ![image](https://github.com/seansteel3/ML_trader/assets/67161057/197c8f72-e7a4-4b74-bf75-e43fb77bc9de) |
 |:--:| 
-| *FIGURE 2: Full model optimization pipelines* |
+| *FIGURE 2: Full model optimization pipelines. "Funneled Grid Search"* |
 
 Average “voting” was used for the final predictions of each ensemble. A security is chosen as a “buy” with the new system by receiving a prediction of 1 from the Gain10 ensemble and a prediction of 0 from the Neg30 ensemble. This is interpreted as “the security is predicted to increase in value by 10% or more **within** the next 6 months AND predicted not to decrease in value by 30% or more at the **end** of 6 months.”
 
