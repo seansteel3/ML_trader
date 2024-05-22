@@ -178,6 +178,17 @@ The final Neg30 ensemble saw 70.7% accuracy over balanced data and 62.14% accura
 <!-- Individual Returns Analysis -->
 ### Individual Returns Analysis
 
+The predictions of the final model ensembles were used to create individual investment return distributions. The “Randomly Chosen” returns were built by randomly sampling over the entire test set. The “Gain10 Only” returns were built by randomly sampling over securities predicted as a buy (predicted class 1) by the Gain10 ensemble. The “Neg30 Only” returns were built by randomly sampling over securities predicted as a buy (predicted class 0) by the Neg30 ensemble. Finally the “Dual Model” returns were built by sampling over securities predicted to buy by both models (predicted 1 from Gain10 AND predicted 0 from Neg30).
+
+All returns were plotted twice, once with all returns in the strategy graphed, and once “zoomed in” where only returns of less than 10% are graphed. The first plot gives a **holistic** view of the individual returns from each strategy, while the second gives a view of what happens when the strategy of “selling when the security increases by 10%” **fails**.
+
+Both the randomly chosen security (ie: no ML model) and the Gain10 ensemble only models have a slightly negative return of -0.16% and -0.1% respectively. While the Gain10 model succeeds in picking far more “winning securities” than random guessing does. However, those “wins” are almost entirely lost by the fact that the average return of **failed** random guesses is just -15% while its almost -21% for those predicted to buy from Gain10 models. Essentially the Gain10 ensemble succeeds at predicting more "winners", but at the cost of substantially decreasing the returns of “losers.”
+
+| ![image](https://github.com/seansteel3/ML_trader/assets/67161057/ed1446dc-0b85-47e2-b96e-49ca61a726a1) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/23751d75-bdb2-4e8b-854d-f9442423ff17) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/e2ebc15a-3383-409c-99cb-0f7752e1eaf4) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/d20e64c7-f84c-4ca2-91cf-705e0987cb4e) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/55515114-887e-45d8-9a3e-2013b12cd868) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/8fa4ddb2-30b2-4c61-800f-ea3843e866df) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/9a94bda6-2e33-4c46-96ef-24d30cf1b7f6) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/6e889f7f-c48f-4477-ab6c-c77eba213af4) |
+|:--:| 
+| *FIGURE 10: Average per-investment returns for Random Guessing, Gain10 Only, Neg30 Only, and Dual Model strategies* |
+
+
 <!-- Backtesting: Six Month Portfolio Returns -->
 ### Backtesting: Six Month Portfolio Returns 
 
@@ -187,30 +198,10 @@ The final Neg30 ensemble saw 70.7% accuracy over balanced data and 62.14% accura
 
 
 
+| |
+|:--:| 
+| *FIGURE 10a: 6 month simulated returns with random start dates for Random Guessing and Gain10 Only* |
 
-Neg30 Heatmap w/balanced test set:
-
-![image](https://github.com/seansteel3/ML_trader/assets/67161057/7c842f91-134f-42fd-b397-aacf24c96ebb)
-
-Neg30 Heatmap w/ imbalanced test set (73.6% are class 0)
-
-![image](https://github.com/seansteel3/ML_trader/assets/67161057/1bbf571b-efd6-456b-a015-f22a11b9dc87)
-
-Neg30 ROC-AUC
-
-![image](https://github.com/seansteel3/ML_trader/assets/67161057/cb797a72-e611-411c-bbac-bf6d4903f4c7)
-
-Gain10 Heatmap w/balanced test set:
-
-![image](https://github.com/seansteel3/ML_trader/assets/67161057/d4f63ecb-d244-439c-a130-a4d33e4c0f13)
-
-Gain10 Heatmap w/ imbalanced test set (69.7% are class 1)
-
-![image](https://github.com/seansteel3/ML_trader/assets/67161057/052334df-a29d-47ec-9371-b7951c2dddf7)
-
-Gain10 ROC-AUC
-
-![image](https://github.com/seansteel3/ML_trader/assets/67161057/806532c8-329f-479e-8684-4b01bbeddd52)
 
 Random Returns histogram
 
