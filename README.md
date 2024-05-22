@@ -214,7 +214,7 @@ The new Gain10 ensemble actually preforms the worst with -4.47% and 61.9% negati
 <!-- Backtesting: Returns Overtime -->
 ### Backtesting: Returns Overtime
 
-Finally, to test how the various ML (machine learning) and non-ML powered trading strategies compare to investing in the overall market, each strategy was simulated 50 times with an initial investment date of 1/1/2022 and a final date of 10/25/2023. The value of each portfolio was checked using the daily close prices and compared to the S&P 500 and to the Invesco QQQ index as market performance proxies. 
+To test how the various ML (machine learning) and non-ML powered trading strategies compare to investing in the overall market, each strategy was simulated 50 times with an initial investment date of 1/1/2022 and a final date of 10/25/2023. The value of each portfolio was checked using the daily close prices and compared to the S&P 500 and to the Invesco QQQ index as market performance proxies. 
 
 The perfect accuracy scenario of 100% of securities increase in value by 10% sometime within  six months unsurprisingly preforms exceptionally well with over 200% returns during the timeframe. However the market itself during this range about breaks even and is “in the red” during the majority of the timeframe. Also unsurprisingly, all of the other investment conditions preform much closer to the market than they do the theoretical maximum.
 
@@ -229,10 +229,19 @@ The Neg30 only and the Dual model predicted portfolios end at about the same val
 |:--:|  
 | *FIGURE 12: All stratgey average returns from 1/1/2022 to 10/25/2023. Plot 1 includes the All Win theoretical maximum, while plot 2 excludes it* |
 
+To test wether or not the generally negative performance of the market during the full testing range was the root cause of the Neg30 only portfolios’ relative strong performance, the simulations were repeated during a generally positive portion of the test range (10/1/2022 to 10/25/2023). During this timeframe the Gain10 only, Old model and Random Choice portfolios all preform the worst as before, but the Dual model now closely tracks the S&P 500 average returns. Additionally, as expected, the Neg30 only portfolios now preform rather lack luster as the frequency of poorly preforming securities drops, and therefore the Neg30’s competitive advantage evaporates. 
 
+| ![image](https://github.com/seansteel3/ML_trader/assets/67161057/c8cac5ba-7d78-4c9e-a599-e363294f98a2) |
+|:--:|  
+| *FIGURE 13: All stratgey average "postive market" returns from 10/1/2022 to 10/25/2023* |
 
+Finally, to explore how periodic retraining, as well as how these strategies and models preform over a longer period of time, models were sequentially retrained and tested across the entire date ranges with the same time breaks as the 5-fold time series cross validation.
 
+This final experiment confirms that the Gain10 model ensemble does in fact do very well during major market upswings, but as expected, preforms by far the worst during sustained market down swings. Meanwhile the Neg30 model ensemble does not catch much of the upswings, but does tend to resist losing value during sustained market drops. The Dual market ensemble takes the “best of both worlds” from these models and can see significant increases in value during bull markets, while seeing a dampened loss in value during bear markets. The Gain10, and by extension the Dual model portfolios, outperform the random choice portfolios and surprisingly also outperform the S&P 500 for the majority of the time range. However unsurprisingly, they both underperform the Investco QQQ from about June 2019 until the end of the simulations.
 
+| ![image](https://github.com/seansteel3/ML_trader/assets/67161057/2596c7c8-2ea3-47cd-a6b1-7df4befb57b3) |
+|:--:|  
+| *FIGURE 13: All Market returns from 1/1/2016 to 10/25/2023* |
 
 
 Average returns over time
