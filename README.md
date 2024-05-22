@@ -94,7 +94,7 @@ Despite the lack a statistical trend overtime, visual inspection of the features
 
 Features for both the Gain10 and Neg30 models were selected by fitting a random forest with 250 trees and a max depth of 4 over the entire training dataset. The features with a cumulative importance score of <0.91 were kept and the rest discarded. Figure 3 shows the features importance scores on the final random forest model for illustration. 
 
-| ![image](https://github.com/seansteel3/ML_trader/assets/67161057/3166083a-6c07-4719-852c-380c6386aa6f=320x320) |
+| ![image](https://github.com/seansteel3/ML_trader/assets/67161057/3166083a-6c07-4719-852c-380c6386aa6f=500x320) |
 |:--:| 
 | *FIGURE 4a: Final feature importances for the Gain10 Ensemble from the final optimized Random Forest model* |
 
