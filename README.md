@@ -188,7 +188,10 @@ Both the randomly chosen security (ie: no ML model) and the Gain10 ensemble only
 |:--:| 
 | *FIGURE 10a: Average per-investment returns for Random Guessing and Gain10 Only strategies.* |
 
-Meanwhile the Neg30 only ensemble does fairly well with +0.43% overall average returns despite the fact it picks “winners” at a lower rate than random guessing. The “zoomed in” histogram makes it clear why this is the case. Since the Neg30 ensemble is successful at weeding out nearly all -90% return securities, and dramatically reduces the number of -30% or more securities, the losses when choosing a “loser” are not nearly as bad (-8.5%) as the Gain10 ensemble or random guessing.
+Meanwhile the Neg30 only ensemble does fairly well with +0.43% overall average returns despite the fact it picks “winners” at a lower rate than random guessing. The "point of failure" histogram shows the relative success of the Neg30 ensemble is because it weeds out nearly all -90% return securities, and dramatically reduces the number of -30% or more securities. Therefore, the losses when choosing a “loser” are not nearly as bad (-8.5%) as the Gain10 ensemble or random guessing, allowing it to preform better.
+
+Combining both the Gain10 and Neg30 predictions into a Dual Model ensemble has the desired effect of leveraging the strengths of both ensembles and minigating the weaknesses. The Dual Model strategy preforms the best with the average returns of +1.57% per investment over the whole training data and only -12.95% when it picks “losers.” 
+
 
 
 | ![image](https://github.com/seansteel3/ML_trader/assets/67161057/55515114-887e-45d8-9a3e-2013b12cd868) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/8fa4ddb2-30b2-4c61-800f-ea3843e866df) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/9a94bda6-2e33-4c46-96ef-24d30cf1b7f6) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/6e889f7f-c48f-4477-ab6c-c77eba213af4) |
