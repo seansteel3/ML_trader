@@ -214,12 +214,20 @@ The new Gain10 ensemble actually preforms the worst with -4.47% and 61.9% negati
 <!-- Backtesting: Returns Overtime -->
 ### Backtesting: Returns Overtime
 
+Finally, to test how the various ML (machine learning) and non-ML powered trading strategies compare to investing in the overall market, each strategy was simulated 50 times with an initial investment date of 1/1/2022 and a final date of 10/25/2023. The value of each portfolio was checked using the daily close prices and compared to the S&P 500 and to the Invesco QQQ index as market performance proxies. 
+
+The perfect accuracy scenario of 100% of securities increase in value by 10% sometime within  six months unsurprisingly preforms exceptionally well with over 200% returns during the timeframe. However the market itself during this range about breaks even and is “in the red” during the majority of the timeframe. Also unsurprisingly, all of the other investment conditions preform much closer to the market than they do the theoretical maximum.
+
+The Random Choice (ie: No ML) strategy tends to slightly underperform the market proxies the entire time range, until the end where is ends significantly below. Interestingly, a similar but slightly worse situation occurs with the old models, despite the fact the old models are technically predicting over training data while the rest are predicting over testing data. 
+
+Meanwhile the new Gain10 only predicted portfolios perform by far the worst of any strategy throughout the timeframe. This is directly due to the fact that when Gain10 ensemble makes an error, it tends to choose securities which preform significantly worse than the average. Specifically, average time for a security to increase in value by 10% is 33 days and 80% sell within 60 days, while the time low preforming securities are held is the full six months. Therefore, as low preforming securities accumulate the portfolio, they tend to erode all the gains made by positive predictions. This can be seen by the jumps in value along with the market and other strategies around July 2022 and mid January 2023, which then quickly collapse in value far faster than any other strategy. 
+
+The Neg30 only and the Dual model predicted portfolios end at about the same value as both market indices, but the Neg30 model outperforms all strategies and the market for the majority of the time range. Since the Neg30 ensemble tends to filter out the worst preforming securities, and since the market performance during this range is mostly negative, the Gain30 only models tend to preform the best. Meanwhile the Dual model portfolios tends to do well during upswings, but still suffers more from the downward draw from incorrect predictions than the Neg30 only portfolios. 
 
 
-
-| |
-|:--:| 
-| *FIGURE 10a: 6 month simulated returns with random start dates for Random Guessing and Gain10 Only* |
+| ![image](https://github.com/seansteel3/ML_trader/assets/67161057/783c603c-c0d9-4fde-b0d2-09fa3eb0f4b6) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/33bcb638-cfaf-44ba-912a-1bf9508590c4) |
+|:--:|  
+| *FIGURE 12: All stratgey average returns from 1/1/2022 to 10/25/2023. Plot 1 includes the All Win theoretical maximum, while plot 2 excludes it* |
 
 
 
