@@ -165,8 +165,14 @@ The final Gain10 ensemble saw an accuracy of 64.37% over balanced test data and 
 
 | ![image](https://github.com/seansteel3/ML_trader/assets/67161057/d4f63ecb-d244-439c-a130-a4d33e4c0f13) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/052334df-a29d-47ec-9371-b7951c2dddf7) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/806532c8-329f-479e-8684-4b01bbeddd52)|
 |:--:| 
-| *FIGURE 10a: Gain10 ensemble confusion matricies for balanced and imbalanced data, plus the plotted ROC curve* |
+| *FIGURE 9a: Gain10 ensemble confusion matrices for balanced and imbalanced data, plus the plotted ROC curve* |
 
+The final Neg30 ensemble saw 70.7% accuracy over balanced data and 62.14% accuracy over the full imbalanced dataset. Its negative precision was 74.87% on balanced data and 91.9% on imbalanced data. In the imbalanced data 73.6% of the observations were class 0, making a 91.9% negative precision represent a 18.3 percentage point improvement over random guessing. Its positive precision is sub optimal (40.03%) but also not of concern in the setting where it will be used to predict what securities to buy (predicted class 0). Its overall ROC-AUC score was 0.78.
+
+
+| ![image](https://github.com/seansteel3/ML_trader/assets/67161057/7c842f91-134f-42fd-b397-aacf24c96ebb) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/1bbf571b-efd6-456b-a015-f22a11b9dc87) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/cb797a72-e611-411c-bbac-bf6d4903f4c7) |
+|:--:| 
+| *FIGURE 9b: Neg30 ensemble confusion matrices for balanced and imbalanced data, plus the plotted ROC curve* |
 
 
 <!-- Individual Returns Analysis -->
