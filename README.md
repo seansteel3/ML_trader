@@ -266,6 +266,8 @@ This final experiment confirms that the Gain10 model ensemble does in fact do ve
 |:--:|  
 | *FIGURE 13: All Market returns from 1/1/2016 to 10/25/2023* |
 
+<!-- Conclusion -->
+## Conclusion
 
 <!-- Supplementals -->
 ## Supplementals
