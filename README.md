@@ -144,7 +144,7 @@ For the Gain10 ensemble, the overall average accuracy across all 5 cross validat
 |:--:| 
 | *FIGURE 7a: Average accuracy and postive precision for the Gain10 ensemble from 5-fold time series cross validation* |
 
-For the Neg30 ensemble the overall average accuracy across all 5 cross validation folds was also highest setting the threshold using threshold using the imbalanced average ROC threshold (imbalanced ROC Accuracy = 74.12%). However, in the case of predicting if a security will decrease in value, negative precision is more important than overall accuracy, and using the imbalanced data’s training mean to set the threshold for class 1 resulted in the highest negative precision (90.63%) compared to the imbalanced ROC threshold (86.72%) with the balanced training mean not far behind in second place (90.26%).
+For the Neg30 ensemble the overall average accuracy across all 5 cross validation folds was also highest setting the threshold using the imbalanced average ROC threshold (imbalanced ROC Accuracy = 74.12%). However, in the case of predicting if a security will decrease in value, negative precision is more important than overall accuracy, and using the imbalanced data’s training mean to set the threshold for class 1 resulted in the highest negative precision (90.63%) compared to the imbalanced ROC threshold (86.72%) with the balanced training mean not far behind in second place (90.26%).
 
 | ![image](https://github.com/seansteel3/ML_trader/assets/67161057/61a1265e-3c0a-4852-a4ff-d3e3146ce274) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/eae7f2fa-acfe-4ca6-b8d2-cb2c93652d6a)|
 |:--:| 
