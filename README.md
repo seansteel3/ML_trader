@@ -186,17 +186,16 @@ Both the randomly chosen security (ie: no ML model) and the Gain10 ensemble only
 
 | ![image](https://github.com/seansteel3/ML_trader/assets/67161057/ed1446dc-0b85-47e2-b96e-49ca61a726a1) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/23751d75-bdb2-4e8b-854d-f9442423ff17) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/e2ebc15a-3383-409c-99cb-0f7752e1eaf4) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/d20e64c7-f84c-4ca2-91cf-705e0987cb4e) |
 |:--:| 
-| *FIGURE 10a: Average per-investment returns for Random Guessing and Gain10 Only strategies.* |
+| *FIGURE 10a: Average per-investment returns for Random Guessing and Gain10 Only strategies. The (<10%) histograms showcase returns when the models "fail"* |
 
 Meanwhile the Neg30 only ensemble does fairly well with +0.43% overall average returns despite the fact it picks “winners” at a lower rate than random guessing. The "point of failure" histogram shows the relative success of the Neg30 ensemble is because it weeds out nearly all -90% return securities, and dramatically reduces the number of -30% or more securities. Therefore, the losses when choosing a “loser” are not nearly as bad (-8.5%) as the Gain10 ensemble or random guessing, allowing it to preform better.
 
 Combining both the Gain10 and Neg30 predictions into a Dual Model ensemble has the desired effect of leveraging the strengths of both ensembles and minigating the weaknesses. The Dual Model strategy preforms the best with the average returns of +1.57% per investment over the whole training data and only -12.95% when it picks “losers.” 
 
 
-
 | ![image](https://github.com/seansteel3/ML_trader/assets/67161057/55515114-887e-45d8-9a3e-2013b12cd868) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/8fa4ddb2-30b2-4c61-800f-ea3843e866df) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/9a94bda6-2e33-4c46-96ef-24d30cf1b7f6) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/6e889f7f-c48f-4477-ab6c-c77eba213af4) |
 |:--:| 
-| *FIGURE 10b: Average per-investment returns for Neg30 Only and Dual Model strategies.* |
+| *FIGURE 10b: Average per-investment returns for Neg30 Only and Dual Model strategies. The (<10%) histograms showcase returns when the models "fail"* |
 
 <!-- Backtesting: Six Month Portfolio Returns -->
 ### Backtesting: Six Month Portfolio Returns 
