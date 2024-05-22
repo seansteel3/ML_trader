@@ -200,6 +200,17 @@ Combining both the Gain10 and Neg30 predictions into a Dual Model ensemble has t
 <!-- Backtesting: Six Month Portfolio Returns -->
 ### Backtesting: Six Month Portfolio Returns 
 
+To assess the actual performances, these these strategies were used to build a $10,000 portfolio evenly distributed across 15 securities. During the simulation securities were sold if they increased in value by 10%, or after 6 months. All securities were “sold” 6 months from start time get an assessment of how the portfolio preformed. Each strategy (random guessing, Gain10 predictions, Neg30 predictions, Dual Model predictions, Old Phase 1 models, and All Win) was simulated 1,500 times to build the below histograms. All Win represents a “perfect” scenario with 100% accuracy for predicting 10% gains in value at some point in 6 months.
+
+The random choice strategy returned an average of -1.73% with a 57.6% chance of negative portfolios, while the perfect All Win strategy returned an average of 45.95% (negative chance is an artifact of ceasing trading after 6 months where some securities decreased in value and would have recovered, but were not given the chance in this simulation). The phase 1 models are an “applies to oranges” comparison since they were actually trained over this timeframe (ie: this data is NOT testing but rather training). Despite this fact, the old models preform poorly with a -3.3% and 62.5% negative return chance.
+
+The new Gain10 ensemble actually preforms the worst with -4.47% and 61.9% negative return chance, likely because of the fact its “failure” picks tend to return far more negative results. However, the Neg30 ensemble nearly breaks even only -0.81% mean and 53.7% chance of negative returns. Finally the Dual model preforms by far the best, with positive returns of +0.39% on average and less than 46.6% negative return chance. 
+
+| ![image](https://github.com/seansteel3/ML_trader/assets/67161057/d5bd46e6-308e-4162-9eb9-1f13819a898d) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/1b08363e-052a-40ca-8495-8d26baad9ae4) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/206cc657-6399-4777-b9f9-b431116babb3) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/bd2615fb-f387-48f7-b6c6-0e44b89e3c67) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/59437c3c-80d0-4960-bab3-673f2b77b1bb) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/e17bf980-a0be-4ef7-bcec-f01915510c9b) |
+|:--:| 
+| *FIGURE 11: 6 month simulated returns with random start dates for Random Guessing, All Win, Old Gain10 ensemble, New Gain10 ensemble, Neg30 ensemble, and Dual Model ensemble strategies* |
+
+
 <!-- Backtesting: Returns Overtime -->
 ### Backtesting: Returns Overtime
 
@@ -211,31 +222,9 @@ Combining both the Gain10 and Neg30 predictions into a Dual Model ensemble has t
 | *FIGURE 10a: 6 month simulated returns with random start dates for Random Guessing and Gain10 Only* |
 
 
-Random Returns histogram
-
-![image](https://github.com/seansteel3/ML_trader/assets/67161057/ed1446dc-0b85-47e2-b96e-49ca61a726a1) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/23751d75-bdb2-4e8b-854d-f9442423ff17)
-
-
-Gain only returns histogram
-
-![image](https://github.com/seansteel3/ML_trader/assets/67161057/e2ebc15a-3383-409c-99cb-0f7752e1eaf4) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/d20e64c7-f84c-4ca2-91cf-705e0987cb4e)
-
-
-Neg30 only histogram
-
-![image](https://github.com/seansteel3/ML_trader/assets/67161057/55515114-887e-45d8-9a3e-2013b12cd868) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/8fa4ddb2-30b2-4c61-800f-ea3843e866df)
 
 
 
-Both histogram
-
-![image](https://github.com/seansteel3/ML_trader/assets/67161057/9a94bda6-2e33-4c46-96ef-24d30cf1b7f6) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/6e889f7f-c48f-4477-ab6c-c77eba213af4)
-
-
-
-6 month porfolio returns
-
-![image](https://github.com/seansteel3/ML_trader/assets/67161057/d5bd46e6-308e-4162-9eb9-1f13819a898d) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/1b08363e-052a-40ca-8495-8d26baad9ae4) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/206cc657-6399-4777-b9f9-b431116babb3) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/bd2615fb-f387-48f7-b6c6-0e44b89e3c67) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/59437c3c-80d0-4960-bab3-673f2b77b1bb) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/e17bf980-a0be-4ef7-bcec-f01915510c9b)
 
 
 Average returns over time
