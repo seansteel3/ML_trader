@@ -32,6 +32,19 @@ The basis of this project is exploring applications of machine learning. The inv
 <!-- Summary -->
 ## Summary
 
+Phase 0 of this project explored if trading securities at random could be an effective investment strategy. During Phase 0, portfolios of 15 securities were created by random selection and sold if they increased in value by 10% or more, or after six months. Phase 1 aimed to improve this system by adding machine learning (ML) models to increase the chance of correctly choosing securities which increase in value by 10% or more within a six month period. 
+
+While the Phase 1 models tended to make fairly accurate predictions, this accuracy came at the cost of significantly decreased returns when the models were wrong. For instance, if an incorrectly predicted security ended up losing 50% of its value within six months, the models would need to be correct five times just to break even on that one incorrect prediction. Further, incorrectly predicted securities tended to have far lower average returns than securities chosen at random that failed to reach the 10% threshold.
+
+Phase 2 of this project corrects the prediction issue of Phase 1 in two ways. The first was improved data quality and reliability using Financial Modeling Prep (FMP). The second was by building an additional ensemble of models to predict what securities may decrease in value by 30% or more, and therefore should be avoided. Phase 2 also expands the backtesting with a series of simulations which allow for an apples to apples comparison to market indices.
+
+Thanks to FMP’s improved capabilities the models could also leverage around 80 new fundamental ratios and metrics coming from company quarterly reports, instead of relying solely on technical indicators like in Phase 1. Additionally, due to improved hardware (Apple M3 Max 16 core CPU + 64GB integrated memory), Phase 2 was able to formally assess a broader number of model architectures and data resampling and standardization methods in reasonable time. A greater depth and variety of backtests could also be run in reasonable time for Phase 2. 
+
+The improvements in data quality and model optimizations resulted in a more accurate ensemble of models predicting if a security would increase in value by 10% within 6 months (Gain10 models). The fundamental data also allowed for a highly accurate ensemble of models predicting if a security would decrease in value by 30% or more at the end of 6 months (Neg30 models). Unsurprisingly, the Gain10 models do very well during general market upswings, but do very poorly during sustained market downswings. While the Neg30 models do well during sustained market downswings, but have lackluster performance during upswings.
+
+Combining these two accurate model systems into a “Dual Model” strategy successfully mitigated the problems of the Phase 1 models. With the Dual Model system, securities were only purchased if they were predicted to increase by 10% or more within 6 months, and simultaneously predicted not to decrease by 30% or more by the end of 6 months. This system took the best qualities of both ensembles enjoying far more stable gains, and even beat or matched the S&P 500 for the majority of the backtests. However, no models beat the Investco QQQ index for more than a few months of the backtests.
+
+
 <!-- Introduction -->
 ## Introduction
 
