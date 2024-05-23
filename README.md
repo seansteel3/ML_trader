@@ -32,7 +32,7 @@ The basis of this project is exploring applications of machine learning, and the
 <!-- Summary -->
 ## Summary
 
-Phase 0 of this project explored if trading securities at random could be an effective investment strategy. During Phase 0, portfolios of 15 securities were created by random selection and sold if they increased in value by 10% or more, or after six months. Phase 1 aimed to improve this system by adding machine learning (ML) models to increase the chance of correctly choosing securities which increase in value by 10% or more within a six month period. 
+Phase 0 of this project explored if trading securities at random could be an effective investment strategy. During Phase 0, portfolios of 15 securities were created by random selection and individual securities were sold if they increased in value by 10% or more, or after six months. Phase 1 aimed to improve this system by adding machine learning (ML) models to increase the chance of correctly choosing securities which increase in value by 10% or more within a six month period. 
 
 While the Phase 1 models tended to make fairly accurate predictions, this accuracy came at the cost of significantly decreased returns when the models were wrong. For instance, if an incorrectly predicted security ended up losing 50% of its value within six months, the models would need to be correct five times just to break even on that one incorrect prediction. Further, incorrectly predicted securities tended to have far lower average returns than securities chosen at random that failed to reach the 10% threshold.
 
