@@ -314,7 +314,7 @@ Future phases of this project will explore adding additional data cleaning and d
 ### Additional Resources
 * [*A Random Walk Down Wallstreet*](https://en.wikipedia.org/wiki/A_Random_Walk_Down_Wall_Street)
 * [*Financial Modeling Prep*](https://site.financialmodelingprep.com/developer/docs)
-* *[The Curse of Dimensionality*](https://en.wikipedia.org/wiki/Curse_of_dimensionality)
+* [*The Curse of Dimensionality*](https://en.wikipedia.org/wiki/Curse_of_dimensionality)
 * [*What is Overfitting?*](https://www.datacamp.com/blog/what-is-overfitting)
 * [*Feature Selection Basics*](https://machinelearningmastery.com/feature-selection-with-real-and-categorical-data/)
 * [*Introduction to Neural Networks*](https://datascientest.com/en/dense-neural-networks-understanding-their-structure-and-function)
