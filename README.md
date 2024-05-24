@@ -130,7 +130,7 @@ Despite the lack a statistical trend overtime, visual inspection of the features
 <!-- Feature Selection -->
 ### Feature Selection
 
-Features for both the Gain10 and Neg30 models were selected by fitting a random forest with 250 trees and a max depth of 4 over the entire training dataset. The features with a cumulative importance score of <0.91 were kept and the rest discarded. Figure 3 shows the features importance scores on the final random forest model for illustration. 
+Features for both the Gain10 and Neg30 models were selected by fitting a random forest with 250 trees and a max depth of 4 over the entire training dataset. The features with a cumulative importance score of <0.91 were kept and the rest discarded. This prevented the chance of overfitting and reduced the risks of running into issues finding a reasonable decision boundary which are associated with the "curse of dimensionality." Figure 3 shows the features importance scores on the final random forest model for illustration. 
 
 Interestingly, the most important features for predicting if a security will increase in value within the next 6 months (Gain10) are almost entirely technical indicators. Even four of the five fundamental indicators are still heavily tied to share prices. Additionally, the most predictive features are also heavily tied to historical volatility. This may likely stem from the fact we are trying not to predict ultimate increases in value, which may be more connected to company fundamentals, but rather transient increases value of at least 10% at least 1 time within the near future. 
 
@@ -287,6 +287,14 @@ This final experiment confirms that the Gain10 model ensemble does in fact do ve
 
 <!-- Conclusion -->
 ## Conclusion
+
+The tendency of the Gain10 ensemble to choose highly volatile securities was a double edged sword. While the models produced fairly accurate predicted probabilities for a security to increase in value by 10% or more within 6 months, the accuracy came at the cost of substantially decreased average returns when the models were incorrect. 
+
+The improved data quality and additional fundamental features provided by Financial Modeling Prep (FMP) substantially increased the accuracy of the Gain10 ensemble. Additionally, the additional features enabled the creation of accurate “Neg30” models to predict if a security will lose 30% of its value at the end of six months. The combination of the Gain10 and Neg30 ensembles into a “Dual Model” strategy successfully mitigated a substantial amount of the risk when using the original Gain10 models on their own. 
+
+Impressively, backtests indicate that the Dual Model strategy has the potential to at least match, if not outperform the S&P 500 when used optimally. However, the noisy decision boundaries provided by the features, and the lack of ability to consistently match the Investco QQQ index’s returns, indicate that improvements or expansions in the data could likely improve these model’s performance further. 
+
+Future phases of this project will explore adding additional data cleaning and data mining for additional features. Future phases may also experiment with recurrent neural networks and transformers to generate meaningful embeddings of integrated quarterly report fundamental data with security OLHCV data.
 
 <!-- Supplementals -->
 ## Supplementals
