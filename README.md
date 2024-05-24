@@ -322,6 +322,7 @@ Future phases of this project will explore adding additional data cleaning and d
 * [*Random Forest Models*](https://builtin.com/data-science/random-forest-algorithm)
 * [*XGBoost*](https://xgboost.readthedocs.io/en/stable/tutorials/model.html)
 * [*Logistic Regression*](https://www.ibm.com/topics/logistic-regression)
+* [*SHAP Analysis*](https://www.datacamp.com/tutorial/introduction-to-shap-values-machine-learning-interpretability)
   
 
 <!-- Run With -->
