@@ -341,6 +341,7 @@ Future phases of this project will explore adding additional data cleaning and d
 * [*Logistic Regression*](https://www.ibm.com/topics/logistic-regression)
 * [*Model Ensembling Basics*](https://medium.com/@datasciencewizards/guide-to-simple-ensemble-learning-techniques-2ac4e2504912)
 * [*SHAP Analysis*](https://www.datacamp.com/tutorial/introduction-to-shap-values-machine-learning-interpretability)
+* [*Basics of ROC-AUC analysis*](https://medium.com/@shaileydash/understanding-the-roc-and-auc-intuitively-31ca96445c02)
   
 
 <!-- Run With -->
