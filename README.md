@@ -145,8 +145,7 @@ Conversely, the most important features for predicting if a security will lose 3
 | *FIGURE 4b: Final feature importances for the Neg30 Ensemble from the final optimized Random Forest model* |
 
 
-| ![image](https://github.com/seansteel3/ML_trader/assets/67161057/f3025cbf-556f-4dc9-98eb-321aa0e11156)
- ![image](https://github.com/seansteel3/ML_trader/assets/67161057/25481c29-62e0-47fb-acd1-685bd7bd64e2)  |
+| ![image](https://github.com/seansteel3/ML_trader/assets/67161057/f3025cbf-556f-4dc9-98eb-321aa0e11156) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/25481c29-62e0-47fb-acd1-685bd7bd64e2) |
 |:--:| 
 | *FIGURE 4c: TSNE embedding projection plots for balanced Neg30 and Gain 10 training data sets. Purple is class 0, yellow is class 1* |
 
