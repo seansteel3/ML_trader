@@ -318,7 +318,7 @@ The tendency of the Gain10 ensemble to choose highly volatile securities was a d
 
 The improved data quality and additional fundamental features provided by Financial Modeling Prep (FMP) substantially increased the accuracy of the Gain10 ensemble. Additionally, the added features enabled the creation of accurate “Neg30” models to predict if a security will lose 30% of its value at the end of six months. The combination of the Gain10 and Neg30 ensembles into a “Dual Model” strategy successfully mitigated a substantial amount of the risk when using the original Gain10 models on their own. 
 
-Impressively, backtests indicate that the Dual Model strategy has the potential to at least match, if not outperform the S&P 500 when used optimally. However, the noisy decision boundaries provided by the features, and the lack of ability to consistently match the Investco QQQ index’s returns, indicate that improvements or expansions in the data could likely enchance the models' performance further. 
+Impressively, backtests indicate that the Dual Model strategy has the potential to at least match, if not outperform the S&P 500 when used optimally. However, the noisy decision boundaries provided by the features, and the lack of ability to consistently match the Investco QQQ index’s returns, indicate that improvements or expansions in the data could likely further enchance the models' performance. 
 
 Future phases of this project will explore adding additional data cleaning and data mining for additional features. Future phases may also experiment with recurrent neural networks and transformers to generate meaningful embeddings of integrated quarterly report fundamental data with security OLHCV data.
 
