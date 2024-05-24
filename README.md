@@ -237,7 +237,7 @@ The fact that favorable predictions (Gain10 class 1, Neg30 class 0) from the mod
 
 The fact favorable predictions from Gain10 and Neg30 are based on opposite levels of volatility also explains why "stringent" criteria for each model could not be combined. Since Gain10 is looking for low volatility and Neg30 looking for high volatility, there are very few securities that both models could simultaneously be highly confident on (greater than 80% confidence). For example, if a security has high volatility, its likely the Neg30 models would confidently classify it as a "buy" (class 0), but since Gain10 looks for *low* volatility it is **unlikely** it would simultaneously classify that security confidently as a buy (class 1).
 
-The Gain10 models also unsurprisingly appear favor securities that are not near the upper 84 day and 21 day Bollinger bands, but rather near their lower 84 day Bollinger bands. Additionally the Neg30 models unsurprisingly predict that companies with higher return on tangible assets, higher price to equity ratios, and higher free cash flow are more likely to not lose 30% of their value.
+The Gain10 models also unsurprisingly appear favor securities that are not near the upper 84 day and 21 day Bollinger bands, but rather near the lower 84 day Bollinger bands. Additionally the Neg30 models unsurprisingly predict that companies with higher return on tangible assets, higher price to equity ratios, and higher free cash flow are more likely to not lose 30% of their value.
 
 | ![image](https://github.com/seansteel3/ML_trader/assets/67161057/7e6e55b1-1362-4911-b1aa-38aa4e87c777) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/10a23840-2127-4d6c-94ac-3600b4d905e3) |
 |:--:| 
