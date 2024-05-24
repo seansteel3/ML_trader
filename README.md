@@ -130,11 +130,15 @@ Despite the lack a statistical trend overtime, visual inspection of the features
 
 Features for both the Gain10 and Neg30 models were selected by fitting a random forest with 250 trees and a max depth of 4 over the entire training dataset. The features with a cumulative importance score of <0.91 were kept and the rest discarded. Figure 3 shows the features importance scores on the final random forest model for illustration. 
 
-| ![image](https://github.com/seansteel3/ML_trader/assets/67161057/3166083a-6c07-4719-852c-380c6386aa6f=320x640) |
+Interestingly, the most important features for predicting if a security will increase in value within the next 6 months (Gain10) are almost entirely technical indicators. Even four of the five fundamental indicators are still heavily tied to share prices. Additionally, the most predictive features are also heavily tied to historical volatility. This may likely stem from the fact we are trying not to predict ultimate increases in value, which may be more connected to company fundamentals, but rather transient increases value of at least 10% at least 1 time within the near future. 
+
+Conversely, the most important features for predicting if a security will lose 30% of its value or more at the end of six months contains a much more balanced mixture of technical and fundamental features. Average true range is still the most informative set of features, indicating volatility is still an important aspect, but the inclusion of more fundamental information makes sense when we are trying to predict if a company loses its value at a set time in the future. 
+
+|  ![image](https://github.com/seansteel3/ML_trader/assets/67161057/ce0f94cf-6199-432b-9989-9237c03b26c4=320x320) |
 |:--:| 
 | *FIGURE 4a: Final feature importances for the Gain10 Ensemble from the final optimized Random Forest model* |
 
-| ![image](https://github.com/seansteel3/ML_trader/assets/67161057/ce0f94cf-6199-432b-9989-9237c03b26c4=320x320) |
+| ![image](https://github.com/seansteel3/ML_trader/assets/67161057/3166083a-6c07-4719-852c-380c6386aa6f=320x640)  |
 |:--:| 
 | *FIGURE 4b: Final feature importances for the Neg30 Ensemble from the final optimized Random Forest model* |
 
