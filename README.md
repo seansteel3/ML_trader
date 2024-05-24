@@ -303,8 +303,7 @@ To test wether or not the generally negative performance of the market during th
 |:--:|  
 | *FIGURE 14: All stratgey average "postive market" returns from 10/1/2022 to 10/25/2023* |
 
-Finally, to explore how periodic retraining, as well as how these strategies and models preform over a longer period of time, models were sequentially retrained and tested across the entire date ranges with the same time breaks as the 5-fold time series rolling cross validation.
-Finally, to explore how periodic retraining, as well as how these strategies and models preform over a longer period of time, models were sequentially retrained and tested across the entire date ranges with the same time breaks as the 5-fold time series rolling cross validation.
+Finally, to explore how periodic retraining, as well as how these strategies and models preform over a longer period of time, models were sequentially retrained and tested across the entire date ranges with the same time breaks as the 5-fold time series rolling cross validation. This enabled all data from 1/1/2016 to 10/25/2023 to act as "test" data for trading simulations.
 
 This final experiment confirms that the Gain10 model ensemble does in fact do very well during major market upswings, but as expected, preforms by far the worst during sustained market down swings. Meanwhile the Neg30 model ensemble does not catch much of the upswings, but does tend to resist losing value during sustained market drops. The Dual market ensemble takes the “best of both worlds” from these models and can see significant increases in value during bull markets, while seeing a dampened loss in value during bear markets. The Gain10, and by extension the Dual model portfolios, outperform the random choice portfolios and surprisingly also outperform the S&P 500 for the majority of the time range. However unsurprisingly, they both underperform the Investco QQQ from about June 2019 until the end of the simulations.
 
