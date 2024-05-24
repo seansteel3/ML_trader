@@ -314,6 +314,7 @@ Future phases of this project will explore adding additional data cleaning and d
 ### Additional Resources
 * [*A Random Walk Down Wallstreet*](https://en.wikipedia.org/wiki/A_Random_Walk_Down_Wall_Street)
 * [*Financial Modeling Prep*](https://site.financialmodelingprep.com/developer/docs)
+* [*Augmented Dickey Fuller Test and Stationary Data*](https://en.wikipedia.org/wiki/Augmented_Dickey%E2%80%93Fuller_test)
 * [*The Curse of Dimensionality*](https://en.wikipedia.org/wiki/Curse_of_dimensionality)
 * [*What is Overfitting?*](https://www.datacamp.com/blog/what-is-overfitting)
 * [*Feature Selection Basics*](https://machinelearningmastery.com/feature-selection-with-real-and-categorical-data/)
