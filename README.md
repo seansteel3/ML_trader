@@ -233,7 +233,7 @@ The final Neg30 ensemble saw 70.7% accuracy over balanced data and 62.14% accura
 
 | ![image](https://github.com/seansteel3/ML_trader/assets/67161057/7e6e55b1-1362-4911-b1aa-38aa4e87c777) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/10a23840-2127-4d6c-94ac-3600b4d905e3) |
 |:--:| 
-| *FIGURE 10a: SHAP Beeswarm Plots for Gain10 and Neg30 **final** Random Forest Models* |
+| *FIGURE 10: SHAP Beeswarm Plots for Gain10 and Neg30 **final** Random Forest Models* |
 
 <!-- Individual Returns Analysis -->
 ### Individual Returns Analysis
