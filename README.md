@@ -332,9 +332,11 @@ Future phases of this project will explore adding additional data cleaning and d
 * [*What is Overfitting?*](https://www.datacamp.com/blog/what-is-overfitting)
 * [*Feature Selection Basics*](https://machinelearningmastery.com/feature-selection-with-real-and-categorical-data/)
 * [*Introduction to Neural Networks*](https://datascientest.com/en/dense-neural-networks-understanding-their-structure-and-function)
+* [*Activation Functions*](https://www.v7labs.com/blog/neural-networks-activation-functions)
 * [*Random Forest Models*](https://builtin.com/data-science/random-forest-algorithm)
 * [*XGBoost*](https://xgboost.readthedocs.io/en/stable/tutorials/model.html)
 * [*Logistic Regression*](https://www.ibm.com/topics/logistic-regression)
+* [*Model Ensembling Basics*](https://medium.com/@datasciencewizards/guide-to-simple-ensemble-learning-techniques-2ac4e2504912)
 * [*SHAP Analysis*](https://www.datacamp.com/tutorial/introduction-to-shap-values-machine-learning-interpretability)
   
 
