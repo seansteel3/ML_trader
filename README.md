@@ -231,6 +231,12 @@ The final Neg30 ensemble saw 70.7% accuracy over balanced data and 62.14% accura
 <!-- Model Explainations: SHAP -->
 ### Model Explainations: SHAP
 
+SHAP bee-swarm plots were generated for the final random forest model in each ensemble to get an idea of how the features drive the final outputs. For both the Gain10 and Neg30 models, higher volatility, as measured by the average true ranges (ATRs) and historical volatilities (VOLs), results in a less likely chance of being predicted for class 1. 
+
+The fact that favorable predictions (Gain10 class 1, Neg30 class 0) from the models work in opposition is not surprising since the models predict effectively opposite outcomes. However, it is spurring that the desired prediction of class 1 from the Gain10 models comes from securities with **lower** volatility, while the desired prediction of class 0 from the Neg30 models comes from **higher** volatility.  It appears in this data, when controlling for other factors, higher volatility is associated with decreased chance of increasing in value by 10% within six months, and decreased chance of losing 30% of value at the end of six months. 
+
+The Gain10 models also unsurprisingly appear favor securities that are not near the upper 84 day and 21 day Bollinger bands, but rather near their lower 84 day Bollinger bands. Additionally the Neg30 models unsurprisingly predict that companies with higher return on tangible assets, higher price to equity ratios, and higher free cash flow are more likely to not lose 30% of their value.
+
 | ![image](https://github.com/seansteel3/ML_trader/assets/67161057/7e6e55b1-1362-4911-b1aa-38aa4e87c777) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/10a23840-2127-4d6c-94ac-3600b4d905e3) |
 |:--:| 
 | *FIGURE 10: SHAP Beeswarm Plots for Gain10 and Neg30 **final** Random Forest Models* |
