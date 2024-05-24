@@ -334,6 +334,7 @@ Future phases of this project will explore adding additional data cleaning and d
 * [*The Curse of Dimensionality*](https://en.wikipedia.org/wiki/Curse_of_dimensionality)
 * [*What is Overfitting?*](https://www.datacamp.com/blog/what-is-overfitting)
 * [*Feature Selection Basics*](https://machinelearningmastery.com/feature-selection-with-real-and-categorical-data/)
+* [*Timeseries Cross Validation*](https://medium.com/@soumyachess1496/cross-validation-in-time-series-566ae4981ce4)
 * [*Introduction to Neural Networks*](https://datascientest.com/en/dense-neural-networks-understanding-their-structure-and-function)
 * [*Activation Functions*](https://www.v7labs.com/blog/neural-networks-activation-functions)
 * [*Random Forest Models*](https://builtin.com/data-science/random-forest-algorithm)
