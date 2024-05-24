@@ -25,6 +25,7 @@ The basis of this project is exploring applications of machine learning, and the
   * [Backtesting: Returns Overtime](#backtesting-returns-overtime)
 * [Conclusion](#conclusion)
 * [Supplementals](#supplementals)
+  * [Additional Resources](#additional-resources)
   * [Supplemental Figure](#supplemental-figure)
   * [Run With](#run-with)
 
@@ -72,7 +73,6 @@ The financialmodelingprep (FMP) API was used to source all tradable and delisted
 The OLHCV data was not directly used in any modeling, but rather transformed into a series of common technical indicators to be used as features. Moving averages, Bollinger bands, minmax ratios, daily moving average true ranges, moving historical volatility (standard deviation), stochastic oscillators, MACD, RSI, and AROON indicators were all built with 3 time variations of 21, 84, and 252 previous consecutive trading day periods as proxies for 1, 4 and 12 months. Average directional index was also calculated, but at only the 21 day period.
 
 The moving averages, Bollinger bands, average true ranges, and MACD were normalized by dividing by the daily close since they are all natively in the scale of the close price. Following normalization, all features were checked for presence of a trend (presence of a unit root) using the Augmented Dickey-Fuller test. Data was then rescaled using SKlearn’s quantile transformer, though SKlearn’s StandardScaler and RobustScaler were tested but were less effective. Finally, the input data was rebalanced using random under sampling, which was the most effective rebalancing method compared to a series of other balancing techniques. Final assessment of all relevant metrics occurred occasionally on balanced validation or test data where appropriate, or otherwise on unbalanced testing data.
-
 
 
 | ![image](https://github.com/seansteel3/ML_trader/assets/67161057/63709f52-e8a0-4404-8872-c505a973f78c) |
@@ -143,6 +143,13 @@ Conversely, the most important features for predicting if a security will lose 3
 | ![image](https://github.com/seansteel3/ML_trader/assets/67161057/3166083a-6c07-4719-852c-380c6386aa6f=320x640)  |
 |:--:| 
 | *FIGURE 4b: Final feature importances for the Neg30 Ensemble from the final optimized Random Forest model* |
+
+
+| ![image](https://github.com/seansteel3/ML_trader/assets/67161057/f3025cbf-556f-4dc9-98eb-321aa0e11156)
+ ![image](https://github.com/seansteel3/ML_trader/assets/67161057/25481c29-62e0-47fb-acd1-685bd7bd64e2)  |
+|:--:| 
+| *FIGURE 4c: TSNE embedding projection plots for balanced Neg30 and Gain 10 training data sets. Purple is class 0, yellow is class 1* |
+
 
 
 <!-- Data Standardization -->
@@ -299,8 +306,19 @@ Future phases of this project will explore adding additional data cleaning and d
 <!-- Supplementals -->
 ## Supplementals
 
+<!-- Additional Resources -->
+### Additional Resources
+
 <!-- Run With -->
 ### Run With
+
+* Python 3.11.5
+* Pandas 2.1.4
+* Numpy 1.24.3
+* SKLearn 1.3.0
+* Imblearn 0.11.0
+* Tensorflow 2.15.0
+* XGBoost 2.0.3
 
 <!-- Supplemental Figure -->
 ### Supplemental Figure
