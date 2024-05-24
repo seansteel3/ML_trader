@@ -20,6 +20,7 @@ The basis of this project is exploring applications of machine learning, and the
   * [Data Standardization](#data-standardization)
   * [Data Resampling](#data-resampling)
   * [Final Model Construction](#final-model-construction)
+  * [Model Explainations: SHAP](#model-explainations-shap)
   * [Individual Returns Analysis](#individual-returns-analysis)
   * [Backtesting: Six Month Portfolio Returns](#backtesting-six-month-portfolio-returns)
   * [Backtesting: Returns Overtime](#backtesting-returns-overtime)
@@ -227,6 +228,12 @@ The final Neg30 ensemble saw 70.7% accuracy over balanced data and 62.14% accura
 |:--:| 
 | *FIGURE 9b: Neg30 ensemble confusion matrices for balanced and imbalanced data, plus the plotted ROC curve* |
 
+<!-- Model Explainations: SHAP -->
+### Model Explainations: SHAP
+
+| ![image](https://github.com/seansteel3/ML_trader/assets/67161057/7e6e55b1-1362-4911-b1aa-38aa4e87c777) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/10a23840-2127-4d6c-94ac-3600b4d905e3) |
+|:--:| 
+| *FIGURE 10a: SHAP Beeswarm Plots for Gain10 and Neg30 **final** Random Forest Models* |
 
 <!-- Individual Returns Analysis -->
 ### Individual Returns Analysis
@@ -239,7 +246,7 @@ Both the randomly chosen security (ie: no ML model) and the Gain10 ensemble only
 
 | ![image](https://github.com/seansteel3/ML_trader/assets/67161057/ed1446dc-0b85-47e2-b96e-49ca61a726a1) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/23751d75-bdb2-4e8b-854d-f9442423ff17) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/e2ebc15a-3383-409c-99cb-0f7752e1eaf4) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/d20e64c7-f84c-4ca2-91cf-705e0987cb4e) |
 |:--:| 
-| *FIGURE 10a: Average per-investment returns for Random Guessing and Gain10 Only strategies. The (<10%) histograms showcase returns when the models "fail"* |
+| *FIGURE 11a: Average per-investment returns for Random Guessing and Gain10 Only strategies. The (<10%) histograms showcase returns when the models "fail"* |
 
 Meanwhile the Neg30 only ensemble does fairly well with +0.43% overall average returns despite the fact it picks “winners” at a lower rate than random guessing. The "point of failure" histogram shows the relative success of the Neg30 ensemble is because it weeds out nearly all -90% return securities, and dramatically reduces the number of -30% or more securities. Therefore, the losses when choosing a “loser” are not nearly as bad (-8.5%) as the Gain10 ensemble or random guessing, allowing it to preform better.
 
@@ -248,7 +255,7 @@ Combining both the Gain10 and Neg30 predictions into a Dual Model ensemble has t
 
 | ![image](https://github.com/seansteel3/ML_trader/assets/67161057/55515114-887e-45d8-9a3e-2013b12cd868) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/8fa4ddb2-30b2-4c61-800f-ea3843e866df) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/9a94bda6-2e33-4c46-96ef-24d30cf1b7f6) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/6e889f7f-c48f-4477-ab6c-c77eba213af4) |
 |:--:| 
-| *FIGURE 10b: Average per-investment returns for Neg30 Only and Dual Model strategies. The (<10%) histograms showcase returns when the models "fail"* |
+| *FIGURE 11b: Average per-investment returns for Neg30 Only and Dual Model strategies. The (<10%) histograms showcase returns when the models "fail"* |
 
 <!-- Backtesting: Six Month Portfolio Returns -->
 ### Backtesting: Six Month Portfolio Returns 
@@ -261,7 +268,7 @@ The new Gain10 ensemble actually preforms the worst with -4.47% and 61.9% negati
 
 | ![image](https://github.com/seansteel3/ML_trader/assets/67161057/d5bd46e6-308e-4162-9eb9-1f13819a898d) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/1b08363e-052a-40ca-8495-8d26baad9ae4) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/206cc657-6399-4777-b9f9-b431116babb3) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/bd2615fb-f387-48f7-b6c6-0e44b89e3c67) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/59437c3c-80d0-4960-bab3-673f2b77b1bb) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/e17bf980-a0be-4ef7-bcec-f01915510c9b) |
 |:--:| 
-| *FIGURE 11: 6 month simulated returns with random start dates for Random Guessing, All Win, Old Gain10 ensemble, New Gain10 ensemble, Neg30 ensemble, and Dual Model ensemble strategies* |
+| *FIGURE 12: 6 month simulated returns with random start dates for Random Guessing, All Win, Old Gain10 ensemble, New Gain10 ensemble, Neg30 ensemble, and Dual Model ensemble strategies* |
 
 
 <!-- Backtesting: Returns Overtime -->
@@ -280,13 +287,13 @@ The Neg30 only and the Dual model predicted portfolios end at about the same val
 
 | ![image](https://github.com/seansteel3/ML_trader/assets/67161057/783c603c-c0d9-4fde-b0d2-09fa3eb0f4b6) ![image](https://github.com/seansteel3/ML_trader/assets/67161057/33bcb638-cfaf-44ba-912a-1bf9508590c4) |
 |:--:|  
-| *FIGURE 12: All stratgey average returns from 1/1/2022 to 10/25/2023. Plot 1 includes the All Win theoretical maximum, while plot 2 excludes it* |
+| *FIGURE 13: All stratgey average returns from 1/1/2022 to 10/25/2023. Plot 1 includes the All Win theoretical maximum, while plot 2 excludes it* |
 
 To test wether or not the generally negative performance of the market during the full testing range was the root cause of the Neg30 only portfolios’ relative strong performance, the simulations were repeated during a generally positive portion of the test range (10/1/2022 to 10/25/2023). During this timeframe the Gain10 only, Old model and Random Choice portfolios all preform the worst as before, but the Dual model now closely tracks the S&P 500 average returns. Additionally, as expected, the Neg30 only portfolios now preform rather lack luster as the frequency of poorly preforming securities drops, and therefore the Neg30’s competitive advantage evaporates. 
 
 | ![image](https://github.com/seansteel3/ML_trader/assets/67161057/c8cac5ba-7d78-4c9e-a599-e363294f98a2) |
 |:--:|  
-| *FIGURE 13: All stratgey average "postive market" returns from 10/1/2022 to 10/25/2023* |
+| *FIGURE 14: All stratgey average "postive market" returns from 10/1/2022 to 10/25/2023* |
 
 Finally, to explore how periodic retraining, as well as how these strategies and models preform over a longer period of time, models were sequentially retrained and tested across the entire date ranges with the same time breaks as the 5-fold time series cross validation.
 
@@ -294,7 +301,7 @@ This final experiment confirms that the Gain10 model ensemble does in fact do ve
 
 | ![image](https://github.com/seansteel3/ML_trader/assets/67161057/2596c7c8-2ea3-47cd-a6b1-7df4befb57b3) |
 |:--:|  
-| *FIGURE 13: All Market returns from 1/1/2016 to 10/25/2023* |
+| *FIGURE 15: All Market returns from 1/1/2016 to 10/25/2023* |
 
 <!-- Conclusion -->
 ## Conclusion
