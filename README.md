@@ -3,7 +3,7 @@
 <!-- Important Notice -->
 ## Important Notice
 
-The basis of this project is exploring applications of machine learning, and the investment setting was chosen due to data availability and interest. Therefore nothing in this repo should be taken as financial advice. In general, past performance cannot predict future success, and small errors in analysis can result in dramatic shifts in expected performance. This repo is academic in nature and should NOT be used as the basis for any legitimate investment strategy.
+The purpose of this project is to explore applications of machine learning, and the investment setting was chosen due to data availability and interest. Therefore nothing in this repo should be taken as financial advice. In general, past performance cannot predict future success, and small errors in analysis can result in dramatic shifts in expected performance. This repo is academic in nature and should NOT be used as the basis for any legitimate investment strategy.
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents 
