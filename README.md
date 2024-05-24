@@ -26,7 +26,7 @@ The purpose of this project is to explore applications of machine learning, and 
   * [Backtesting: Returns Overtime](#backtesting-returns-overtime)
 * [Conclusion](#conclusion)
 * [Supplementals](#supplementals)
-  * [Additional Resources](#additional-resources)
+  * [Additional Resources and Readings](#additional-resources-and-readings)
   * [Supplemental Figure](#supplemental-figure)
   * [Run With](#run-with)
 
@@ -325,8 +325,8 @@ Future phases of this project will explore adding additional data cleaning and d
 <!-- Supplementals -->
 ## Supplementals
 
-<!-- Additional Resources -->
-### Additional Resources
+<!-- Additional Resources and Readings -->
+### Additional Resources and Readings
 * [*A Random Walk Down Wallstreet*](https://en.wikipedia.org/wiki/A_Random_Walk_Down_Wall_Street)
 * [*Financial Modeling Prep*](https://site.financialmodelingprep.com/developer/docs)
 * [*Augmented Dickey Fuller Test and Stationary Data*](https://en.wikipedia.org/wiki/Augmented_Dickey%E2%80%93Fuller_test)
