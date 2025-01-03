@@ -19,7 +19,6 @@ import requests
 import joblib
 from io import BytesIO
 import matplotlib.pyplot as plt
-os.chdir('//Users//seansteele//Desktop//Random Trader')
 
 from random_trader_utils.training_utils import gain_feats, neg_feats, keeps, \
     index_resample_tab, build_dense, predict_purchases, heatmap, roc_curve, auc
